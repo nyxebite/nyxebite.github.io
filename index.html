@@ -8,32 +8,121 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NyxeBite — Websites Built for Your Business</title>
+<title>NyxeBite — We Build Digital Experiences</title>
 
-<meta name="description" content="NyxeBite creates modern, professional websites for businesses, brands and creators.">
-
-<meta name="keywords" content="NyxeBite, website design, business websites, professional websites, website development">
+<meta name="description" content="NyxeBite builds modern, premium and futuristic websites for businesses, brands and creators.">
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#08080d;
-    color:#fff;
-    line-height:1.6;
+    background:#050507;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
+
+body::before{
+    content:"";
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:#6d28d9;
+    filter:blur(220px);
+    opacity:.13;
+    top:-250px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:-2;
+}
+
+.grid-bg{
+    position:fixed;
+    inset:0;
+    z-index:-3;
+    opacity:.15;
+    background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+    background-size:60px 60px;
+    mask-image:linear-gradient(to bottom,black,transparent 80%);
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    width:92%;
+    max-width:1100px;
+    z-index:999;
+    padding:14px 18px;
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(10,10,14,.65);
+    backdrop-filter:blur(20px);
+    border-radius:22px;
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+
+.logo span{
+    color:#9b6cff;
+}
+
+.navlinks{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.navlinks a{
+    font-size:13px;
+    color:#aaa;
+    transition:.3s;
+}
+
+.navlinks a:hover{
+    color:white;
+}
+
+.navbutton{
+    padding:10px 17px;
+    border-radius:12px;
+    background:#fff;
+    color:#08080a!important;
+    font-weight:700;
+}
+
+/* GENERAL */
 
 .container{
     width:90%;
@@ -41,60 +130,26 @@ a{
     margin:auto;
 }
 
-/* NAVBAR */
-
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    background:rgba(8,8,13,0.88);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(255,255,255,0.08);
+section{
+    padding:120px 0;
 }
 
-.nav-inner{
-    max-width:1150px;
-    width:90%;
-    margin:auto;
-    height:75px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    font-size:24px;
+.label{
+    color:#9b6cff;
+    font-size:12px;
     font-weight:800;
-    letter-spacing:-1px;
+    letter-spacing:3px;
+    margin-bottom:18px;
 }
 
-.logo span{
-    color:#8b5cf6;
+.title{
+    font-size:clamp(42px,6vw,75px);
+    line-height:.98;
+    letter-spacing:-4px;
 }
 
-.nav-links{
-    display:flex;
-    gap:28px;
-    align-items:center;
-}
-
-.nav-links a{
-    font-size:14px;
-    color:#b9b9c5;
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    color:#fff;
-}
-
-.nav-btn{
-    padding:10px 17px;
-    border:1px solid #8b5cf6;
-    border-radius:30px;
-    color:#fff !important;
+.muted{
+    color:#90909a;
 }
 
 /* HERO */
@@ -103,255 +158,377 @@ nav{
     min-height:100vh;
     display:flex;
     align-items:center;
-    padding-top:80px;
+    padding-top:120px;
     position:relative;
-    overflow:hidden;
-}
-
-.hero:before{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    background:#6d28d9;
-    filter:blur(180px);
-    opacity:0.22;
-    top:10%;
-    left:50%;
-    transform:translateX(-50%);
 }
 
 .hero-content{
-    position:relative;
-    max-width:850px;
+    text-align:center;
+    width:100%;
 }
 
-.badge{
-    display:inline-block;
-    padding:8px 15px;
-    border:1px solid rgba(139,92,246,0.5);
-    border-radius:30px;
-    color:#c4b5fd;
-    font-size:12px;
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 15px;
+    border:1px solid rgba(155,108,255,.35);
+    background:rgba(155,108,255,.08);
+    border-radius:100px;
+    color:#c8b5ff;
+    font-size:11px;
+    font-weight:700;
     letter-spacing:1.5px;
-    margin-bottom:25px;
+    margin-bottom:30px;
+}
+
+.dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#9b6cff;
+    box-shadow:0 0 15px #9b6cff;
 }
 
 .hero h1{
-    font-size:clamp(50px,8vw,95px);
-    line-height:0.98;
-    letter-spacing:-5px;
-    margin-bottom:28px;
+    font-size:clamp(58px,10vw,125px);
+    line-height:.87;
+    letter-spacing:-8px;
+    max-width:1000px;
+    margin:auto;
 }
 
-.hero h1 span{
-    color:#8b5cf6;
+.gradient{
+    background:linear-gradient(
+        90deg,
+        #fff,
+        #a77cff,
+        #7040ff,
+        #fff
+    );
+    background-size:250%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:gradient 5s linear infinite;
+}
+
+@keyframes gradient{
+    0%{background-position:0%}
+    100%{background-position:250%}
 }
 
 .hero p{
-    color:#aaaab7;
-    font-size:18px;
     max-width:650px;
-    margin-bottom:35px;
+    margin:35px auto;
+    color:#9999a4;
+    font-size:17px;
+    line-height:1.8;
 }
 
-.buttons{
+.hero-buttons{
     display:flex;
-    gap:15px;
+    justify-content:center;
+    gap:14px;
     flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-block;
-    padding:14px 23px;
-    border-radius:10px;
-    font-weight:700;
-    transition:0.3s;
+    padding:15px 23px;
+    border-radius:14px;
+    font-size:14px;
+    font-weight:800;
+    transition:.35s;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
 }
 
-.btn.primary{
-    background:#8b5cf6;
-    color:white;
+.primary{
+    background:white;
+    color:#050507;
+    box-shadow:0 0 40px rgba(255,255,255,.12);
 }
 
-.btn.primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 30px rgba(139,92,246,0.3);
+.primary:hover{
+    transform:translateY(-5px) scale(1.02);
+    box-shadow:0 15px 50px rgba(255,255,255,.2);
 }
 
-.btn.secondary{
-    border:1px solid rgba(255,255,255,0.15);
-    color:#ddd;
+.secondary{
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.035);
 }
 
-.btn.secondary:hover{
-    background:#fff;
-    color:#08080d;
+.secondary:hover{
+    background:rgba(255,255,255,.08);
+    transform:translateY(-5px);
 }
 
-/* SECTIONS */
+/* 3D ORB */
 
-section{
-    padding:110px 0;
+.scene{
+    width:280px;
+    height:280px;
+    margin:80px auto 0;
+    perspective:900px;
 }
 
-.section-label{
-    color:#8b5cf6;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:2px;
-    margin-bottom:15px;
+.orb{
+    width:230px;
+    height:230px;
+    margin:auto;
+    border-radius:50%;
+    position:relative;
+    transform-style:preserve-3d;
+    background:
+    radial-gradient(circle at 30% 25%,
+    #ffffff 0%,
+    #c6adff 7%,
+    #7142ff 30%,
+    #240b62 65%,
+    #07030e 100%);
+    box-shadow:
+    0 0 50px #6d35ff,
+    0 0 120px rgba(109,53,255,.4),
+    inset -30px -30px 60px rgba(0,0,0,.7);
+    animation:float 5s ease-in-out infinite;
 }
 
-.section-title{
-    font-size:clamp(35px,5vw,60px);
-    line-height:1.05;
-    letter-spacing:-2px;
-    margin-bottom:20px;
+.orb::before{
+    content:"";
+    position:absolute;
+    inset:18px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.4);
+    transform:translateZ(30px);
 }
 
-.section-text{
-    color:#9999a7;
-    max-width:650px;
+.orb::after{
+    content:"NYXE";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    font-weight:900;
+    letter-spacing:5px;
+    color:rgba(255,255,255,.7);
+    transform:translateZ(45px);
 }
 
-/* CLIENT */
+@keyframes float{
+    0%,100%{
+        transform:rotateX(12deg) rotateY(-15deg) translateY(0);
+    }
+    50%{
+        transform:rotateX(-10deg) rotateY(20deg) translateY(-25px);
+    }
+}
 
-.client-box{
-    margin-top:45px;
-    padding:45px;
-    border-radius:22px;
+/* STATS */
+
+.stats{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.stat{
+    padding:30px;
+    text-align:center;
+    border-right:1px solid rgba(255,255,255,.08);
+}
+
+.stat:last-child{
+    border:0;
+}
+
+.stat strong{
+    display:block;
+    font-size:30px;
+}
+
+.stat span{
+    color:#777782;
+    font-size:12px;
+}
+
+/* SECTION HEAD */
+
+.section-head{
+    max-width:700px;
+    margin-bottom:55px;
+}
+
+/* GLASS */
+
+.glass{
     background:linear-gradient(
-        135deg,
-        rgba(139,92,246,0.12),
-        rgba(255,255,255,0.03)
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
     );
-    border:1px solid rgba(255,255,255,0.09);
-}
-
-.client-box h3{
-    font-size:32px;
-    margin-bottom:12px;
-}
-
-.client-box p{
-    color:#aaaab7;
-    max-width:650px;
-    margin-bottom:25px;
+    border:1px solid rgba(255,255,255,.09);
+    backdrop-filter:blur(15px);
+    box-shadow:
+    inset 0 1px rgba(255,255,255,.06),
+    0 25px 80px rgba(0,0,0,.25);
 }
 
 /* SERVICES */
 
-.services-grid{
-    margin-top:50px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.service{
-    padding:30px;
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:18px;
-    background:rgba(255,255,255,0.025);
-    transition:0.3s;
-}
-
-.service:hover{
-    transform:translateY(-7px);
-    border-color:rgba(139,92,246,0.5);
-}
-
-.service-number{
-    color:#8b5cf6;
-    font-size:13px;
-    margin-bottom:20px;
-}
-
-.service h3{
-    margin-bottom:10px;
-    font-size:20px;
-}
-
-.service p{
-    color:#9696a3;
-    font-size:14px;
-}
-
-/* PORTFOLIO */
-
-.portfolio-grid{
-    margin-top:50px;
+.services{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
-.project{
-    min-height:270px;
-    border-radius:20px;
-    padding:30px;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    background:linear-gradient(
-        145deg,
-        #17131f,
-        #0d0d13
-    );
-    border:1px solid rgba(255,255,255,0.08);
-    transition:0.3s;
+.service{
+    padding:32px;
+    min-height:260px;
+    border-radius:24px;
+    position:relative;
     overflow:hidden;
+    transition:.5s;
+    transform-style:preserve-3d;
 }
 
-.project:hover{
-    transform:translateY(-7px);
-    border-color:#8b5cf6;
+.service:hover{
+    transform:
+    perspective(800px)
+    rotateX(5deg)
+    rotateY(-5deg)
+    translateY(-10px);
+    border-color:rgba(155,108,255,.4);
 }
 
-.project-tag{
-    color:#a78bfa;
+.service-number{
     font-size:12px;
-    margin-bottom:8px;
-}
-
-.project h3{
-    font-size:25px;
-}
-
-.project p{
-    color:#92929e;
-    font-size:14px;
-}
-
-/* HOW IT WORKS */
-
-.steps{
-    margin-top:50px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.step{
-    padding:28px;
-    border-left:1px solid #8b5cf6;
-    background:rgba(255,255,255,0.025);
-}
-
-.step span{
-    font-size:35px;
-    color:#8b5cf6;
+    color:#9b6cff;
     font-weight:800;
 }
 
-.step h3{
-    margin:10px 0;
+.service-icon{
+    font-size:35px;
+    margin:30px 0 20px;
 }
 
-.step p{
-    color:#9696a3;
-    font-size:14px;
+.service h3{
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.service p{
+    color:#858590;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:20px;
+}
+
+.project{
+    min-height:350px;
+    border-radius:25px;
+    padding:30px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    transition:.5s;
+}
+
+.project:hover{
+    transform:translateY(-8px);
+}
+
+.project.one{
+    background:
+    radial-gradient(circle at 70% 20%,#6638d9,transparent 30%),
+    linear-gradient(145deg,#191022,#08080c);
+}
+
+.project.two{
+    background:
+    radial-gradient(circle at 30% 20%,#a855f7,transparent 25%),
+    linear-gradient(145deg,#16101d,#08080c);
+}
+
+.project.three{
+    background:
+    radial-gradient(circle at 70% 30%,#4f46e5,transparent 25%),
+    linear-gradient(145deg,#0e1020,#08080c);
+}
+
+.project::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.15);
+    right:30px;
+    top:30px;
+    box-shadow:
+    0 0 0 25px rgba(255,255,255,.02),
+    0 0 0 50px rgba(255,255,255,.015);
+}
+
+.project-tag{
+    color:#b99cff;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+    position:relative;
+}
+
+.project h3{
+    font-size:32px;
+    margin:7px 0;
+    position:relative;
+}
+
+.project p{
+    color:#92929d;
+    font-size:13px;
+    position:relative;
+}
+
+/* PROCESS */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.process-card{
+    padding:30px;
+    border-radius:20px;
+}
+
+.process-card span{
+    font-size:40px;
+    font-weight:900;
+    color:#9b6cff;
+}
+
+.process-card h3{
+    margin:15px 0 8px;
+}
+
+.process-card p{
+    color:#858590;
+    font-size:13px;
 }
 
 /* WHY */
@@ -359,8 +536,12 @@ section{
 .why{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+    gap:30px;
+}
+
+.why-box{
+    padding:45px;
+    border-radius:25px;
 }
 
 .why-list{
@@ -369,19 +550,92 @@ section{
 }
 
 .why-item{
-    padding:20px;
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:15px;
-    background:rgba(255,255,255,0.025);
+    padding:23px;
+    border-radius:18px;
 }
 
 .why-item h3{
-    margin-bottom:5px;
+    margin-bottom:7px;
 }
 
 .why-item p{
-    color:#9696a3;
+    color:#858590;
+    font-size:13px;
+}
+
+/* FOUNDER */
+
+.founder{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:stretch;
+}
+
+.founder-intro{
+    padding:45px;
+    border-radius:25px;
+}
+
+.founder-card{
+    padding:45px;
+    border-radius:25px;
+    position:relative;
+    overflow:hidden;
+}
+
+.founder-card::before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:#6d35ff;
+    filter:blur(100px);
+    opacity:.2;
+    right:-80px;
+    top:-80px;
+}
+
+.founder-avatar{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    font-weight:900;
+    background:linear-gradient(
+        135deg,
+        #a77cff,
+        #321277
+    );
+    box-shadow:
+    0 0 40px rgba(155,108,255,.4);
+    margin-bottom:25px;
+    position:relative;
+}
+
+.founder-role{
+    color:#9b6cff;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+    position:relative;
+}
+
+.founder-name{
+    font-size:36px;
+    margin:7px 0 12px;
+    position:relative;
+}
+
+.founder-card p{
+    color:#858590;
     font-size:14px;
+    line-height:1.8;
+    position:relative;
 }
 
 /* CTA */
@@ -389,23 +643,37 @@ section{
 .cta{
     text-align:center;
     padding:100px 30px;
-    border-radius:25px;
-    background:linear-gradient(
-        135deg,
-        rgba(139,92,246,0.17),
-        rgba(255,255,255,0.03)
-    );
-    border:1px solid rgba(255,255,255,0.08);
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+}
+
+.cta::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:#713cff;
+    filter:blur(140px);
+    opacity:.25;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.cta-content{
+    position:relative;
 }
 
 .cta h2{
-    font-size:clamp(40px,6vw,70px);
-    letter-spacing:-3px;
-    margin-bottom:20px;
+    font-size:clamp(45px,7vw,85px);
+    line-height:1;
+    letter-spacing:-5px;
+    margin-bottom:25px;
 }
 
 .cta p{
-    color:#a0a0ad;
+    color:#92929d;
     margin-bottom:30px;
 }
 
@@ -414,29 +682,24 @@ section{
 .contact{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:start;
+    gap:25px;
 }
 
 .contact-card{
-    padding:35px;
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:20px;
-    background:rgba(255,255,255,0.025);
+    padding:40px;
+    border-radius:25px;
 }
 
 .contact-item{
     margin-bottom:25px;
 }
 
-.contact-item:last-child{
-    margin-bottom:0;
-}
-
-.contact-item p{
-    color:#8f8f9b;
-    font-size:13px;
-    margin-bottom:5px;
+.contact-item small{
+    display:block;
+    color:#777783;
+    font-size:11px;
+    letter-spacing:2px;
+    margin-bottom:7px;
 }
 
 .contact-item strong{
@@ -444,33 +707,32 @@ section{
 }
 
 .contact-buttons{
-    margin-top:30px;
     display:flex;
     gap:12px;
     flex-wrap:wrap;
+    margin-top:30px;
 }
 
 /* FOOTER */
 
 footer{
-    border-top:1px solid rgba(255,255,255,0.08);
-    padding:30px 0;
-    color:#777783;
-    font-size:13px;
+    padding:35px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#666671;
+    font-size:12px;
 }
 
-.footer-inner{
+.footer{
     display:flex;
     justify-content:space-between;
-    gap:20px;
 }
 
-/* SCROLL ANIMATION */
+/* REVEAL */
 
 .reveal{
     opacity:0;
-    transform:translateY(30px);
-    transition:0.8s ease;
+    transform:translateY(40px);
+    transition:1s ease;
 }
 
 .reveal.active{
@@ -480,84 +742,106 @@ footer{
 
 /* MOBILE */
 
-@media(max-width:800px){
+@media(max-width:850px){
 
-    .nav-links{
+    .navlinks{
         display:none;
     }
 
-    .hero h1{
-        letter-spacing:-3px;
+    section{
+        padding:85px 0;
     }
 
-    .services-grid,
-    .portfolio-grid{
+    .hero h1{
+        letter-spacing:-5px;
+    }
+
+    .services,
+    .portfolio,
+    .why,
+    .founder{
         grid-template-columns:1fr;
     }
 
-    .steps{
+    .process{
         grid-template-columns:1fr 1fr;
     }
 
-    .why,
     .contact{
         grid-template-columns:1fr;
     }
 
-    .client-box{
-        padding:30px;
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .stat{
+        border-right:0;
+        border-bottom:1px solid rgba(255,255,255,.08);
     }
 
 }
 
 @media(max-width:500px){
 
-    section{
-        padding:80px 0;
+    .hero h1{
+        font-size:57px;
     }
 
-    .hero p{
-        font-size:16px;
-    }
-
-    .steps{
+    .process{
         grid-template-columns:1fr;
     }
 
-    .footer-inner{
+    .orb{
+        width:190px;
+        height:190px;
+    }
+
+    .scene{
+        height:230px;
+    }
+
+    .footer{
         flex-direction:column;
+        gap:10px;
+    }
+
+    .founder-name{
+        font-size:30px;
     }
 
 }
 
 </style>
-
 </head>
 
 <body>
+
+<div class="grid-bg"></div>
+
 
 <!-- NAVBAR -->
 
 <nav>
 
-<div class="nav-inner">
+<div class="nav">
 
 <a href="#" class="logo">
 Nyxe<span>Bite</span>
 </a>
 
-<div class="nav-links">
-
-<a href="#find">Get Started</a>
+<div class="navlinks">
 
 <a href="#services">Services</a>
 
-<a href="#portfolio">Portfolio</a>
+<a href="#work">Work</a>
 
-<a href="#how">How It Works</a>
+<a href="#process">Process</a>
 
-<a href="#contact" class="nav-btn">
-Start a Project
+<a href="#founder">Founder</a>
+
+<a href="#contact" class="navbutton">
+Start Project →
 </a>
 
 </div>
@@ -575,30 +859,53 @@ Start a Project
 
 <div class="hero-content reveal">
 
-<div class="badge">
-✦ DIGITAL CREATIVE STUDIO
+<div class="hero-badge">
+
+<span class="dot"></span>
+
+DIGITAL CREATIVE STUDIO
+
 </div>
 
+
 <h1>
-Your Vision.<br>
-<span>Our Creation.</span>
+
+We Build
+
+<br>
+
+<span class="gradient">
+Digital Experiences.
+</span>
+
 </h1>
 
+
 <p>
-NyxeBite creates modern, professional and mobile-friendly
-websites for businesses, brands, creators and individuals.
-Turn your idea into a website that people remember.
+
+NyxeBite creates premium, modern and high-performance
+websites for businesses, brands and people who want to
+stand out online.
+
 </p>
 
-<div class="buttons">
+
+<div class="hero-buttons">
 
 <a href="#contact" class="btn primary">
-Start Your Website →
+Start Your Project →
 </a>
 
-<a href="#portfolio" class="btn secondary">
-View Our Work
+<a href="#work" class="btn secondary">
+Explore Our Work
 </a>
+
+</div>
+
+
+<div class="scene">
+
+<div class="orb"></div>
 
 </div>
 
@@ -609,40 +916,39 @@ View Our Work
 </section>
 
 
-<!-- CLIENT -->
+<!-- STATS -->
 
-<section id="find">
+<section style="padding-top:20px;">
 
 <div class="container reveal">
 
-<div class="section-label">
-01 — FOR CLIENTS
+<div class="stats">
+
+<div class="stat">
+
+<strong>01</strong>
+
+<span>VISION</span>
+
 </div>
 
-<h2 class="section-title">
-Your website<br>
-starts here.
-</h2>
 
-<p class="section-text">
-Have a business, brand, salon, product or personal idea?
-NyxeBite can help you turn it into a professional online presence.
-</p>
+<div class="stat">
 
-<div class="client-box">
+<strong>∞</strong>
 
-<h3>
-Looking for a Website?
-</h3>
+<span>CREATIVITY</span>
 
-<p>
-Tell us what you need and we'll create a website designed
-around your idea, your audience and your goals.
-</p>
+</div>
 
-<a href="#contact" class="btn primary">
-Get Your Website →
-</a>
+
+<div class="stat">
+
+<strong>24/7</strong>
+
+<span>DIGITAL PRESENCE</span>
+
+</div>
 
 </div>
 
@@ -657,119 +963,126 @@ Get Your Website →
 
 <div class="container reveal">
 
-<div class="section-label">
-02 — SERVICES
+<div class="section-head">
+
+<div class="label">
+01 — SERVICES
 </div>
 
-<h2 class="section-title">
-What we build.
+<h2 class="title">
+
+Built for your<br>
+
+<span class="gradient">
+next move.
+</span>
+
 </h2>
 
-<p class="section-text">
-Simple, modern and professional websites made for different
-types of businesses and personal projects.
-</p>
+<p class="muted" style="margin-top:22px;">
 
-<div class="services-grid">
+From business websites to personal brands, we create
+digital experiences designed around your goals.
 
-<div class="service">
-
-<div class="service-number">
-01
-</div>
-
-<h3>
-Business Websites
-</h3>
-
-<p>
-Professional websites that help businesses build trust
-and attract customers online.
 </p>
 
 </div>
 
 
-<div class="service">
+<div class="services">
 
-<div class="service-number">
-02
-</div>
 
-<h3>
-Salon & Local Business
-</h3>
+<div class="service glass">
+
+<div class="service-number">01</div>
+
+<div class="service-icon">◈</div>
+
+<h3>Business Websites</h3>
 
 <p>
-Modern websites for salons, shops, cafés and other local businesses.
+Professional websites that help your business
+build trust and reach more customers online.
 </p>
 
 </div>
 
 
-<div class="service">
+<div class="service glass">
 
-<div class="service-number">
-03
-</div>
+<div class="service-number">02</div>
 
-<h3>
-Personal Websites
-</h3>
+<div class="service-icon">✦</div>
+
+<h3>Brand Websites</h3>
 
 <p>
-Create an online identity with a clean personal or portfolio website.
+Unique digital identities designed to make
+your brand look memorable and premium.
 </p>
 
 </div>
 
 
-<div class="service">
+<div class="service glass">
 
-<div class="service-number">
-04
-</div>
+<div class="service-number">03</div>
 
-<h3>
-Product & Brand Pages
-</h3>
+<div class="service-icon">◎</div>
+
+<h3>Landing Pages</h3>
 
 <p>
-Showcase products, services and brands with attractive landing pages.
+Focused pages designed to showcase your
+product, service or idea.
 </p>
 
 </div>
 
 
-<div class="service">
+<div class="service glass">
 
-<div class="service-number">
-05
-</div>
+<div class="service-number">04</div>
 
-<h3>
-Mobile-Friendly Design
-</h3>
+<div class="service-icon">⌁</div>
+
+<h3>Personal Websites</h3>
 
 <p>
-Websites designed to work smoothly across phones, tablets and computers.
+Build your personal presence with a modern
+portfolio or creator website.
 </p>
 
 </div>
 
 
-<div class="service">
+<div class="service glass">
 
-<div class="service-number">
-06
-</div>
+<div class="service-number">05</div>
 
-<h3>
-Modern UI
-</h3>
+<div class="service-icon">◇</div>
+
+<h3>Mobile First</h3>
 
 <p>
-Clean layouts, strong visuals and modern interfaces that look professional.
+Beautiful experiences that work smoothly
+across phones, tablets and computers.
+</p>
+
+</div>
+
+
+<div class="service glass">
+
+<div class="service-number">06</div>
+
+<div class="service-icon">⚡</div>
+
+<h3>Modern UI</h3>
+
+<p>
+Clean interfaces, animations and visual
+details that give your website a premium feel.
 </p>
 
 </div>
@@ -783,26 +1096,33 @@ Clean layouts, strong visuals and modern interfaces that look professional.
 
 <!-- PORTFOLIO -->
 
-<section id="portfolio">
+<section id="work">
 
 <div class="container reveal">
 
-<div class="section-label">
-03 — PORTFOLIO
+<div class="section-head">
+
+<div class="label">
+02 — SELECTED WORK
 </div>
 
-<h2 class="section-title">
-Our work.
+<h2 class="title">
+
+Ideas turned<br>
+
+<span class="gradient">
+into reality.
+</span>
+
 </h2>
 
-<p class="section-text">
-A few examples of the type of websites we can create.
-</p>
-
-<div class="portfolio-grid">
+</div>
 
 
-<div class="project">
+<div class="portfolio">
+
+
+<div class="project one glass">
 
 <div class="project-tag">
 DIGITAL STUDIO
@@ -813,16 +1133,16 @@ NyxeBite
 </h3>
 
 <p>
-The official NyxeBite website.
+Futuristic digital creative studio experience.
 </p>
 
 </div>
 
 
-<div class="project">
+<div class="project two glass">
 
 <div class="project-tag">
-SALON WEBSITE
+SALON / LOCAL BUSINESS
 </div>
 
 <h3>
@@ -830,13 +1150,13 @@ Catwalk Salon
 </h3>
 
 <p>
-A modern website concept for a beauty salon.
+Modern website concept for a beauty business.
 </p>
 
 </div>
 
 
-<div class="project">
+<div class="project three glass">
 
 <div class="project-tag">
 PERSONAL BRAND
@@ -847,7 +1167,7 @@ Creator Website
 </h3>
 
 <p>
-A clean personal website concept for creators and professionals.
+A clean digital home for creators and professionals.
 </p>
 
 </div>
@@ -860,87 +1180,89 @@ A clean personal website concept for creators and professionals.
 </section>
 
 
-<!-- HOW IT WORKS -->
+<!-- PROCESS -->
 
-<section id="how">
+<section id="process">
 
 <div class="container reveal">
 
-<div class="section-label">
-04 — HOW IT WORKS
+<div class="section-head">
+
+<div class="label">
+03 — PROCESS
 </div>
 
-<h2 class="section-title">
-From idea to<br>
-online.
-</h2>
+<h2 class="title">
 
-<div class="steps">
+Simple process.<br>
 
-
-<div class="step">
-
-<span>
-01
+<span class="gradient">
+Big results.
 </span>
 
+</h2>
+
+</div>
+
+
+<div class="process">
+
+
+<div class="process-card glass">
+
+<span>01</span>
+
 <h3>
-Tell Us Your Idea
+Tell Us
 </h3>
 
 <p>
-Tell us about your business, brand or project and what kind of website you want.
+Tell us about your business and what you want.
 </p>
 
 </div>
 
 
-<div class="step">
+<div class="process-card glass">
 
-<span>
-02
-</span>
+<span>02</span>
 
 <h3>
 Plan
 </h3>
 
 <p>
-We decide the structure, content and overall look of your website.
+We plan the structure, design and experience.
 </p>
 
 </div>
 
 
-<div class="step">
+<div class="process-card glass">
 
-<span>
-03
-</span>
+<span>03</span>
 
 <h3>
 Build
 </h3>
 
 <p>
-Your website is designed and developed with a modern responsive layout.
+Your website is designed and developed.
 </p>
 
 </div>
 
 
-<div class="step">
+<div class="process-card glass">
 
-<span>
-04
-</span>
+<span>04</span>
 
 <h3>
-Go Live
+Launch
 </h3>
 
 <p>
-Your website is ready to share with your customers and audience.
+Your website goes live and is ready to share.
 </p>
 
 </div>
@@ -961,20 +1283,28 @@ Your website is ready to share with your customers and audience.
 
 <div class="why">
 
-<div>
 
-<div class="section-label">
-05 — WHY NYXEBITE
+<div class="why-box glass">
+
+<div class="label">
+04 — WHY NYXEBITE
 </div>
 
-<h2 class="section-title">
-Built around<br>
-your vision.
+<h2 class="title">
+
+Not just a<br>
+
+<span class="gradient">
+website.
+</span>
+
 </h2>
 
-<p class="section-text">
-We focus on creating websites that are simple to understand,
-good-looking and useful for your goals.
+<p class="muted" style="margin-top:25px;">
+
+Your website is often the first thing people see.
+We focus on making that first impression count.
+
 </p>
 
 </div>
@@ -982,56 +1312,130 @@ good-looking and useful for your goals.
 
 <div class="why-list">
 
-<div class="why-item">
+
+<div class="why-item glass">
 
 <h3>
-✦ Modern Design
+✦ Premium Visuals
 </h3>
 
 <p>
-Clean and attractive interfaces designed for today's web.
+Modern layouts with strong visual identity.
 </p>
 
 </div>
 
 
-<div class="why-item">
+<div class="why-item glass">
 
 <h3>
-✦ Mobile Friendly
+✦ Mobile Ready
 </h3>
 
 <p>
-Your website looks good on mobile phones as well as computers.
+Designed to look great on every screen.
 </p>
 
 </div>
 
 
-<div class="why-item">
+<div class="why-item glass">
 
 <h3>
-✦ Built Around You
+✦ Your Vision
 </h3>
 
 <p>
-Your website is created according to your business and requirements.
+Every project is shaped around your requirements.
 </p>
 
 </div>
 
 
-<div class="why-item">
+<div class="why-item glass">
 
 <h3>
-✦ Ready for Growth
+✦ Built to Grow
 </h3>
 
 <p>
-Start simple and improve your website as your business grows.
+Start with a website and keep improving as you grow.
 </p>
 
 </div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOUNDER -->
+
+<section id="founder">
+
+<div class="container reveal">
+
+<div class="founder">
+
+
+<div class="founder-intro glass">
+
+<div class="label">
+05 — THE FOUNDER
+</div>
+
+<h2 class="title">
+
+Meet the<br>
+
+<span class="gradient">
+Founder.
+</span>
+
+</h2>
+
+<p class="muted" style="margin-top:25px;">
+
+NyxeBite was created with a vision to help
+businesses, brands and creators build a strong
+and modern presence on the web.
+
+</p>
+
+</div>
+
+
+<div class="founder-card glass">
+
+
+<div class="founder-avatar">
+SS
+</div>
+
+
+<div class="founder-role">
+FOUNDER & CREATIVE LEAD
+</div>
+
+
+<h3 class="founder-name">
+Shresth Singh
+</h3>
+
+
+<p>
+
+Founder of NyxeBite — focused on creating
+modern, creative and memorable digital
+experiences.
+
+</p>
+
 
 </div>
 
@@ -1048,24 +1452,30 @@ Start simple and improve your website as your business grows.
 
 <div class="container reveal">
 
-<div class="cta">
+<div class="cta glass">
+
+<div class="cta-content">
+
+<div class="label">
+READY?
+</div>
 
 <h2>
-Ready to go online?
+
+Let's build<br>
+
+<span class="gradient">
+something epic.
+</span>
+
 </h2>
 
 <p>
-Let's turn your idea into a professional website.
+Have an idea? Let's turn it into a digital experience.
 </p>
 
-<div class="buttons" style="justify-content:center;">
-
 <a href="#contact" class="btn primary">
-Start a Project →
-</a>
-
-<a href="#portfolio" class="btn secondary">
-See Our Work
+Start Your Project →
 </a>
 
 </div>
@@ -1085,33 +1495,41 @@ See Our Work
 
 <div class="contact">
 
+
 <div>
 
-<div class="section-label">
+<div class="label">
 06 — CONTACT
 </div>
 
-<h2 class="section-title">
-Let's build<br>
-something great.
+<h2 class="title">
+
+Your idea.<br>
+
+<span class="gradient">
+Our build.
+</span>
+
 </h2>
 
-<p class="section-text">
-For website projects, collaborations and enquiries,
-contact NyxeBite through email or WhatsApp.
+<p class="muted" style="margin-top:25px;max-width:500px;">
+
+Tell us what you need and let's discuss
+your website project.
+
 </p>
 
 </div>
 
 
-<div class="contact-card">
+<div class="contact-card glass">
 
 
 <div class="contact-item">
 
-<p>
+<small>
 EMAIL
-</p>
+</small>
 
 <strong>
 singhshresth128@gmail.com
@@ -1122,9 +1540,9 @@ singhshresth128@gmail.com
 
 <div class="contact-item">
 
-<p>
+<small>
 WHATSAPP
-</p>
+</small>
 
 <strong>
 8189027132
@@ -1135,13 +1553,16 @@ WHATSAPP
 
 <div class="contact-buttons">
 
+
 <a
 href="https://wa.me/918189027132"
 target="_blank"
 rel="noopener noreferrer"
 class="btn primary"
 >
-WhatsApp NyxeBite →
+
+WhatsApp Us →
+
 </a>
 
 
@@ -1149,11 +1570,13 @@ WhatsApp NyxeBite →
 href="mailto:singhshresth128@gmail.com"
 class="btn secondary"
 >
-Email NyxeBite →
+
+Email Us
+
 </a>
 
-</div>
 
+</div>
 
 </div>
 
@@ -1170,14 +1593,14 @@ Email NyxeBite →
 
 <div class="container">
 
-<div class="footer-inner">
+<div class="footer">
 
 <div>
-© 2026 NyxeBite. All rights reserved.
+© 2026 NyxeBite
 </div>
 
 <div>
-Websites • Design • Digital
+FOUNDED BY SHRESTH SINGH
 </div>
 
 </div>
@@ -1187,32 +1610,93 @@ Websites • Design • Digital
 </footer>
 
 
-<!-- JAVASCRIPT -->
-
 <script>
 
-const reveals = document.querySelectorAll(".reveal");
+/* SCROLL REVEAL */
 
-const observer = new IntersectionObserver(
-(entries) => {
+const reveals =
+document.querySelectorAll(".reveal");
 
-entries.forEach(entry => {
+const observer =
+new IntersectionObserver(
+(entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("active");
+        }
+    });
+},
+{
+    threshold:.12
+});
 
-if(entry.isIntersecting){
+reveals.forEach(el=>{
+    observer.observe(el);
+});
 
-entry.target.classList.add("active");
 
-}
+/* 3D ORB MOUSE EFFECT */
+
+const orb =
+document.querySelector(".orb");
+
+document.addEventListener("mousemove",(e)=>{
+
+    if(window.innerWidth < 700) return;
+
+    const x =
+    (e.clientX / window.innerWidth - .5) * 25;
+
+    const y =
+    (e.clientY / window.innerHeight - .5) * 25;
+
+    orb.style.transform =
+    `rotateX(${-y}deg) rotateY(${x}deg)`;
 
 });
 
-},
-{
-threshold:0.12
-}
-);
 
-reveals.forEach(el => observer.observe(el));
+/* 3D SERVICE CARDS */
+
+const cards =
+document.querySelectorAll(".service");
+
+cards.forEach(card=>{
+
+    card.addEventListener("mousemove",(e)=>{
+
+        const rect =
+        card.getBoundingClientRect();
+
+        const x =
+        e.clientX - rect.left;
+
+        const y =
+        e.clientY - rect.top;
+
+        const rotateY =
+        (x / rect.width - .5) * 10;
+
+        const rotateX =
+        (y / rect.height - .5) * -10;
+
+        card.style.transform =
+        `perspective(800px)
+         rotateX(${rotateX}deg)
+         rotateY(${rotateY}deg)
+         translateY(-8px)`;
+
+    });
+
+
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.transform =
+        "perspective(800px) rotateX(0) rotateY(0) translateY(0)";
+
+    });
+
+});
 
 </script>
 
