@@ -14,11 +14,6 @@
 
 <meta name="keywords" content="NyxeBite, website design, business websites, professional websites, website development">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 <style>
 
 *{
@@ -28,49 +23,23 @@
     scroll-behavior:smooth;
 }
 
-:root{
-    --bg:#050507;
-    --card:#0d0d13;
-    --text:#f7f7fb;
-    --muted:#9696a8;
-    --line:rgba(255,255,255,.09);
-    --purple:#8b5cf6;
-    --cyan:#06b6d4;
-}
-
 body{
-    font-family:'Inter',sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    overflow-x:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#08080d;
+    color:#fff;
+    line-height:1.6;
 }
 
-body::before{
-    content:"";
-    position:fixed;
-    width:550px;
-    height:550px;
-    background:rgba(139,92,246,.13);
-    filter:blur(130px);
-    border-radius:50%;
-    top:-180px;
-    left:-180px;
-    z-index:-2;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-body::after{
-    content:"";
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:rgba(6,182,212,.08);
-    filter:blur(130px);
-    border-radius:50%;
-    bottom:-200px;
-    right:-150px;
-    z-index:-2;
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
 }
-
 
 /* NAVBAR */
 
@@ -79,550 +48,429 @@ nav{
     top:0;
     left:0;
     width:100%;
-    height:76px;
-    padding:0 7%;
+    z-index:1000;
+    background:rgba(8,8,13,0.88);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav-inner{
+    max-width:1150px;
+    width:90%;
+    margin:auto;
+    height:75px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-
-    background:rgba(5,5,7,.72);
-    backdrop-filter:blur(20px);
-
-    border-bottom:1px solid var(--line);
-    z-index:1000;
 }
 
 .logo{
     font-size:24px;
-    font-weight:900;
-    letter-spacing:-1.5px;
+    font-weight:800;
+    letter-spacing:-1px;
 }
 
 .logo span{
-    color:var(--purple);
+    color:#8b5cf6;
 }
 
 .nav-links{
     display:flex;
-    gap:25px;
-    list-style:none;
+    gap:28px;
+    align-items:center;
 }
 
 .nav-links a{
-    color:#aaa;
-    text-decoration:none;
-    font-size:13px;
-    transition:.3s;
+    font-size:14px;
+    color:#b9b9c5;
+    transition:0.3s;
 }
 
 .nav-links a:hover{
-    color:white;
+    color:#fff;
 }
 
 .nav-btn{
-    text-decoration:none;
-    color:white;
-    border:1px solid var(--line);
-    padding:11px 18px;
+    padding:10px 17px;
+    border:1px solid #8b5cf6;
     border-radius:30px;
-    font-size:13px;
-    transition:.3s;
+    color:#fff !important;
 }
-
-.nav-btn:hover{
-    background:white;
-    color:black;
-}
-
 
 /* HERO */
 
 .hero{
     min-height:100vh;
-    padding:150px 7% 100px;
-
     display:flex;
-    justify-content:center;
     align-items:center;
+    padding-top:80px;
+    position:relative;
+    overflow:hidden;
+}
 
-    text-align:center;
+.hero:before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#6d28d9;
+    filter:blur(180px);
+    opacity:0.22;
+    top:10%;
+    left:50%;
+    transform:translateX(-50%);
 }
 
 .hero-content{
-    max-width:1000px;
+    position:relative;
+    max-width:850px;
 }
 
 .badge{
     display:inline-block;
-    padding:9px 16px;
-
-    border:1px solid rgba(139,92,246,.35);
-    background:rgba(139,92,246,.08);
-
-    border-radius:50px;
-
+    padding:8px 15px;
+    border:1px solid rgba(139,92,246,0.5);
+    border-radius:30px;
     color:#c4b5fd;
-    font-size:11px;
-    letter-spacing:1px;
-
+    font-size:12px;
+    letter-spacing:1.5px;
     margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:clamp(55px,9vw,105px);
-    line-height:.95;
-    letter-spacing:-6px;
-    font-weight:900;
+    font-size:clamp(50px,8vw,95px);
+    line-height:0.98;
+    letter-spacing:-5px;
+    margin-bottom:28px;
 }
 
-.gradient{
-    background:linear-gradient(90deg,#ffffff,#a78bfa,#67e8f9);
-    -webkit-background-clip:text;
-    color:transparent;
+.hero h1 span{
+    color:#8b5cf6;
 }
 
 .hero p{
-    max-width:680px;
-    margin:30px auto;
-
-    color:var(--muted);
-    font-size:16px;
-    line-height:1.8;
+    color:#aaaab7;
+    font-size:18px;
+    max-width:650px;
+    margin-bottom:35px;
 }
 
 .buttons{
     display:flex;
-    justify-content:center;
-    gap:14px;
+    gap:15px;
     flex-wrap:wrap;
 }
 
 .btn{
     display:inline-block;
-    padding:15px 25px;
-
-    border-radius:12px;
-    text-decoration:none;
-
-    font-size:14px;
+    padding:14px 23px;
+    border-radius:10px;
     font-weight:700;
-
-    transition:.3s;
+    transition:0.3s;
 }
 
-.primary{
-    background:white;
-    color:black;
-}
-
-.primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 15px 40px rgba(255,255,255,.13);
-}
-
-.secondary{
-    border:1px solid var(--line);
+.btn.primary{
+    background:#8b5cf6;
     color:white;
 }
 
-.secondary:hover{
-    background:#111118;
+.btn.primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(139,92,246,0.3);
 }
 
+.btn.secondary{
+    border:1px solid rgba(255,255,255,0.15);
+    color:#ddd;
+}
+
+.btn.secondary:hover{
+    background:#fff;
+    color:#08080d;
+}
 
 /* SECTIONS */
 
 section{
-    padding:110px 7%;
+    padding:110px 0;
+}
+
+.section-label{
+    color:#8b5cf6;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:15px;
 }
 
 .section-title{
-    max-width:720px;
-    margin-bottom:55px;
+    font-size:clamp(35px,5vw,60px);
+    line-height:1.05;
+    letter-spacing:-2px;
+    margin-bottom:20px;
 }
 
-.section-title small{
-    color:#a78bfa;
-    font-size:11px;
-    letter-spacing:3px;
-    text-transform:uppercase;
+.section-text{
+    color:#9999a7;
+    max-width:650px;
 }
-
-.section-title h2{
-    margin-top:12px;
-
-    font-size:clamp(38px,5vw,62px);
-    line-height:1;
-    letter-spacing:-3px;
-}
-
-.section-title p{
-    margin-top:18px;
-    color:var(--muted);
-    line-height:1.7;
-}
-
 
 /* CLIENT */
 
 .client-box{
-    max-width:1000px;
-    margin:auto;
-
-    padding:50px;
-
-    border:1px solid var(--line);
-    border-radius:28px;
-
-    background:
-    radial-gradient(circle at 80% 20%,
-    rgba(139,92,246,.14),
-    transparent 35%),
-    var(--card);
-
-    transition:.4s;
-}
-
-.client-box:hover{
-    transform:translateY(-6px);
-    border-color:rgba(139,92,246,.4);
-}
-
-.client-icon{
-    font-size:45px;
-    margin-bottom:25px;
+    margin-top:45px;
+    padding:45px;
+    border-radius:22px;
+    background:linear-gradient(
+        135deg,
+        rgba(139,92,246,0.12),
+        rgba(255,255,255,0.03)
+    );
+    border:1px solid rgba(255,255,255,0.09);
 }
 
 .client-box h3{
     font-size:32px;
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
 .client-box p{
-    color:var(--muted);
-    line-height:1.8;
-    max-width:700px;
-    margin-bottom:28px;
+    color:#aaaab7;
+    max-width:650px;
+    margin-bottom:25px;
 }
-
 
 /* SERVICES */
 
-.grid{
+.services-grid{
+    margin-top:50px;
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-.card{
+.service{
     padding:30px;
-    min-height:240px;
-
-    border:1px solid var(--line);
-    border-radius:22px;
-
-    background:linear-gradient(145deg,#101016,#09090d);
-
-    transition:.4s;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+    background:rgba(255,255,255,0.025);
+    transition:0.3s;
 }
 
-.card:hover{
+.service:hover{
     transform:translateY(-7px);
-    border-color:rgba(139,92,246,.4);
+    border-color:rgba(139,92,246,0.5);
 }
 
-.icon{
-    width:52px;
-    height:52px;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:15px;
-    background:#17131f;
-
-    font-size:23px;
-    margin-bottom:24px;
+.service-number{
+    color:#8b5cf6;
+    font-size:13px;
+    margin-bottom:20px;
 }
 
-.card h3{
-    font-size:19px;
-    margin-bottom:12px;
+.service h3{
+    margin-bottom:10px;
+    font-size:20px;
 }
 
-.card p{
-    color:var(--muted);
+.service p{
+    color:#9696a3;
     font-size:14px;
-    line-height:1.65;
 }
-
 
 /* PORTFOLIO */
 
 .portfolio-grid{
+    margin-top:50px;
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
-.portfolio-card{
+.project{
+    min-height:270px;
+    border-radius:20px;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    background:linear-gradient(
+        145deg,
+        #17131f,
+        #0d0d13
+    );
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
     overflow:hidden;
-
-    border:1px solid var(--line);
-    border-radius:24px;
-
-    background:var(--card);
-
-    transition:.4s;
 }
 
-.portfolio-card:hover{
-    transform:translateY(-8px);
-    border-color:rgba(139,92,246,.45);
-    box-shadow:0 20px 60px rgba(0,0,0,.35);
+.project:hover{
+    transform:translateY(-7px);
+    border-color:#8b5cf6;
 }
 
-.portfolio-preview{
-    height:250px;
-
-    display:flex;
-    align-items:flex-end;
-
-    padding:28px;
-
-    background:
-    radial-gradient(circle at 80% 20%,
-    rgba(139,92,246,.45),
-    transparent 40%),
-    linear-gradient(135deg,#171221,#08080c);
-}
-
-.portfolio-preview.salon{
-    background:
-    radial-gradient(circle at 80% 20%,
-    rgba(236,72,153,.35),
-    transparent 40%),
-    linear-gradient(135deg,#21121d,#08080c);
-}
-
-.portfolio-preview.creator{
-    background:
-    radial-gradient(circle at 80% 20%,
-    rgba(6,182,212,.35),
-    transparent 40%),
-    linear-gradient(135deg,#101c21,#08080c);
-}
-
-.preview-content span{
-    color:#c4b5fd;
-    font-size:10px;
-    letter-spacing:3px;
-    font-weight:800;
-}
-
-.preview-content h3{
-    margin-top:8px;
-    font-size:27px;
-}
-
-.preview-content p{
-    margin-top:6px;
-    color:#aaa;
+.project-tag{
+    color:#a78bfa;
     font-size:12px;
-}
-
-.portfolio-info{
-    padding:24px;
-
-    display:flex;
-    justify-content:space-between;
-    gap:15px;
-    align-items:flex-start;
-}
-
-.portfolio-info h3{
-    font-size:18px;
     margin-bottom:8px;
 }
 
-.portfolio-info p{
-    color:var(--muted);
-    font-size:13px;
-    line-height:1.6;
+.project h3{
+    font-size:25px;
 }
 
-.portfolio-tag{
-    white-space:nowrap;
-
-    padding:6px 10px;
-
-    border:1px solid var(--line);
-    border-radius:20px;
-
-    color:#aaa;
-    font-size:10px;
+.project p{
+    color:#92929e;
+    font-size:14px;
 }
-
 
 /* HOW IT WORKS */
 
 .steps{
+    margin-top:50px;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
 
 .step{
-    padding:30px;
-
-    border:1px solid var(--line);
-    border-radius:22px;
-
-    background:#0b0b10;
+    padding:28px;
+    border-left:1px solid #8b5cf6;
+    background:rgba(255,255,255,0.025);
 }
 
-.number{
-    color:#a78bfa;
-    font-size:13px;
+.step span{
+    font-size:35px;
+    color:#8b5cf6;
     font-weight:800;
-    margin-bottom:30px;
 }
 
 .step h3{
-    font-size:18px;
-    margin-bottom:10px;
+    margin:10px 0;
 }
 
 .step p{
-    color:var(--muted);
-    font-size:13px;
-    line-height:1.6;
+    color:#9696a3;
+    font-size:14px;
 }
-
 
 /* WHY */
 
 .why{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:20px;
+    gap:50px;
+    align-items:center;
 }
 
-.why-card{
-    padding:35px;
-
-    border:1px solid var(--line);
-    border-radius:22px;
-
-    background:#0b0b10;
+.why-list{
+    display:grid;
+    gap:15px;
 }
 
-.why-card h3{
-    margin-bottom:12px;
-    font-size:20px;
+.why-item{
+    padding:20px;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:15px;
+    background:rgba(255,255,255,0.025);
 }
 
-.why-card p{
-    color:var(--muted);
-    line-height:1.7;
+.why-item h3{
+    margin-bottom:5px;
+}
+
+.why-item p{
+    color:#9696a3;
     font-size:14px;
 }
-
 
 /* CTA */
 
 .cta{
     text-align:center;
-
-    padding:130px 7%;
-
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-
-    background:
-    radial-gradient(circle at center,
-    rgba(139,92,246,.13),
-    transparent 55%);
+    padding:100px 30px;
+    border-radius:25px;
+    background:linear-gradient(
+        135deg,
+        rgba(139,92,246,0.17),
+        rgba(255,255,255,0.03)
+    );
+    border:1px solid rgba(255,255,255,0.08);
 }
 
 .cta h2{
-    font-size:clamp(42px,6vw,75px);
-    letter-spacing:-4px;
+    font-size:clamp(40px,6vw,70px);
+    letter-spacing:-3px;
+    margin-bottom:20px;
 }
 
 .cta p{
-    color:var(--muted);
-    max-width:560px;
-
-    margin:20px auto 30px;
-
-    line-height:1.7;
+    color:#a0a0ad;
+    margin-bottom:30px;
 }
-
 
 /* CONTACT */
 
 .contact{
-    text-align:center;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:start;
 }
 
-.contact-box{
-    max-width:700px;
-    margin:auto;
-
-    padding:40px;
-
-    border:1px solid var(--line);
-    border-radius:25px;
-
-    background:#0b0b10;
+.contact-card{
+    padding:35px;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    background:rgba(255,255,255,0.025);
 }
 
-.contact-box p{
-    color:var(--muted);
-    margin:10px;
+.contact-item{
+    margin-bottom:25px;
 }
 
-.contact-box strong{
-    color:white;
+.contact-item:last-child{
+    margin-bottom:0;
+}
+
+.contact-item p{
+    color:#8f8f9b;
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+.contact-item strong{
+    font-size:18px;
 }
 
 .contact-buttons{
-    margin-top:25px;
-
+    margin-top:30px;
     display:flex;
-    justify-content:center;
     gap:12px;
     flex-wrap:wrap;
 }
 
-
 /* FOOTER */
 
 footer{
-    padding:45px 7%;
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding:30px 0;
+    color:#777783;
+    font-size:13px;
+}
 
+.footer-inner{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-
-    color:#777;
-    font-size:13px;
-
-    border-top:1px solid var(--line);
+    gap:20px;
 }
 
-footer strong{
-    color:white;
-}
-
-
-/* REVEAL */
+/* SCROLL ANIMATION */
 
 .reveal{
     opacity:0;
     transform:translateY(30px);
-    transition:1s;
+    transition:0.8s ease;
 }
 
 .reveal.active{
@@ -630,40 +478,19 @@ footer strong{
     transform:translateY(0);
 }
 
-
 /* MOBILE */
 
-@media(max-width:850px){
-
-    nav{
-        padding:0 5%;
-    }
+@media(max-width:800px){
 
     .nav-links{
         display:none;
     }
 
-    .hero{
-        padding-left:5%;
-        padding-right:5%;
-    }
-
     .hero h1{
-        letter-spacing:-4px;
+        letter-spacing:-3px;
     }
 
-    section{
-        padding:80px 5%;
-    }
-
-    .why{
-        grid-template-columns:1fr;
-    }
-
-    .grid{
-        grid-template-columns:1fr 1fr;
-    }
-
+    .services-grid,
     .portfolio-grid{
         grid-template-columns:1fr;
     }
@@ -672,170 +499,154 @@ footer strong{
         grid-template-columns:1fr 1fr;
     }
 
-    footer{
-        flex-direction:column;
-        gap:15px;
-        text-align:center;
-    }
-
-}
-
-@media(max-width:520px){
-
-    .grid,
-    .steps{
+    .why,
+    .contact{
         grid-template-columns:1fr;
-    }
-
-    .hero h1{
-        font-size:55px;
     }
 
     .client-box{
         padding:30px;
     }
 
-    .section-title h2{
-        letter-spacing:-2px;
+}
+
+@media(max-width:500px){
+
+    section{
+        padding:80px 0;
     }
 
-    .nav-btn{
-        padding:9px 14px;
+    .hero p{
+        font-size:16px;
     }
 
-    .portfolio-preview{
-        height:220px;
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .footer-inner{
+        flex-direction:column;
     }
 
 }
 
 </style>
+
 </head>
 
-
 <body>
-
 
 <!-- NAVBAR -->
 
 <nav>
 
-    <div class="logo">
-        Nyxe<span>Bite</span>
-    </div>
+<div class="nav-inner">
 
-    <ul class="nav-links">
+<a href="#" class="logo">
+Nyxe<span>Bite</span>
+</a>
 
-        <li>
-            <a href="#find">Get Started</a>
-        </li>
+<div class="nav-links">
 
-        <li>
-            <a href="#services">Services</a>
-        </li>
+<a href="#find">Get Started</a>
 
-        <li>
-            <a href="#portfolio">Portfolio</a>
-        </li>
+<a href="#services">Services</a>
 
-        <li>
-            <a href="#how">How It Works</a>
-        </li>
+<a href="#portfolio">Portfolio</a>
 
-    </ul>
+<a href="#how">How It Works</a>
 
-    <a href="#contact" class="nav-btn">
-        Start a Project
-    </a>
+<a href="#contact" class="nav-btn">
+Start a Project
+</a>
+
+</div>
+
+</div>
 
 </nav>
 
 
 <!-- HERO -->
 
-<header class="hero">
+<section class="hero">
 
-    <div class="hero-content reveal">
+<div class="container">
 
-        <div class="badge">
-            ✦ DIGITAL CREATIVE STUDIO
-        </div>
+<div class="hero-content reveal">
 
-        <h1>
-            Your Vision.<br>
-            <span class="gradient">
-                Our Creation.
-            </span>
-        </h1>
+<div class="badge">
+✦ DIGITAL CREATIVE STUDIO
+</div>
 
-        <p>
-            Need a professional website for your business,
-            brand or personal project? NyxeBite creates
-            modern digital experiences designed to make
-            your online presence stand out.
-        </p>
+<h1>
+Your Vision.<br>
+<span>Our Creation.</span>
+</h1>
 
-        <div class="buttons">
+<p>
+NyxeBite creates modern, professional and mobile-friendly
+websites for businesses, brands, creators and individuals.
+Turn your idea into a website that people remember.
+</p>
 
-            <a href="#contact" class="btn primary">
-                Start Your Website →
-            </a>
+<div class="buttons">
 
-            <a href="#portfolio" class="btn secondary">
-                View Our Work
-            </a>
+<a href="#contact" class="btn primary">
+Start Your Website →
+</a>
 
-        </div>
+<a href="#portfolio" class="btn secondary">
+View Our Work
+</a>
 
-    </div>
+</div>
 
-</header>
+</div>
+
+</div>
+
+</section>
 
 
 <!-- CLIENT -->
 
 <section id="find">
 
-    <div class="section-title reveal">
+<div class="container reveal">
 
-        <small>
-            01 — For Clients
-        </small>
+<div class="section-label">
+01 — FOR CLIENTS
+</div>
 
-        <h2>
-            Your website<br>
-            starts here.
-        </h2>
+<h2 class="section-title">
+Your website<br>
+starts here.
+</h2>
 
-        <p>
-            Tell us what you need and we'll help turn
-            your idea into a professional website.
-        </p>
+<p class="section-text">
+Have a business, brand, salon, product or personal idea?
+NyxeBite can help you turn it into a professional online presence.
+</p>
 
-    </div>
+<div class="client-box">
 
+<h3>
+Looking for a Website?
+</h3>
 
-    <div class="client-box reveal">
+<p>
+Tell us what you need and we'll create a website designed
+around your idea, your audience and your goals.
+</p>
 
-        <div class="client-icon">
-            👤
-        </div>
+<a href="#contact" class="btn primary">
+Get Your Website →
+</a>
 
-        <h3>
-            Looking for a Website?
-        </h3>
+</div>
 
-        <p>
-            Whether you're running a salon, small business,
-            personal brand or online project, NyxeBite can
-            create a website that represents you online.
-        </p>
-
-        <a href="#contact" class="btn primary">
-            Get Your Website →
-        </a>
-
-    </div>
+</div>
 
 </section>
 
@@ -844,135 +655,128 @@ footer strong{
 
 <section id="services">
 
-    <div class="section-title reveal">
+<div class="container reveal">
 
-        <small>
-            02 — Our Services
-        </small>
+<div class="section-label">
+02 — SERVICES
+</div>
 
-        <h2>
-            Everything you need<br>
-            to go online.
-        </h2>
+<h2 class="section-title">
+What we build.
+</h2>
 
-        <p>
-            We create modern websites for businesses,
-            brands, creators and personal projects.
-        </p>
+<p class="section-text">
+Simple, modern and professional websites made for different
+types of businesses and personal projects.
+</p>
 
-    </div>
+<div class="services-grid">
 
+<div class="service">
 
-    <div class="grid">
+<div class="service-number">
+01
+</div>
 
-        <div class="card reveal">
+<h3>
+Business Websites
+</h3>
 
-            <div class="icon">
-                🌐
-            </div>
+<p>
+Professional websites that help businesses build trust
+and attract customers online.
+</p>
 
-            <h3>
-                Business Websites
-            </h3>
-
-            <p>
-                Professional websites designed to help
-                businesses build a strong online presence.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card reveal">
+<div class="service">
 
-            <div class="icon">
-                💇
-            </div>
+<div class="service-number">
+02
+</div>
 
-            <h3>
-                Salon & Local Business
-            </h3>
+<h3>
+Salon & Local Business
+</h3>
 
-            <p>
-                Attractive websites for salons, shops,
-                restaurants and local businesses.
-            </p>
+<p>
+Modern websites for salons, shops, cafés and other local businesses.
+</p>
 
-        </div>
-
-
-        <div class="card reveal">
-
-            <div class="icon">
-                👤
-            </div>
-
-            <h3>
-                Personal Websites
-            </h3>
-
-            <p>
-                Clean personal websites for portfolios,
-                creators, students and professionals.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card reveal">
+<div class="service">
 
-            <div class="icon">
-                🛍️
-            </div>
+<div class="service-number">
+03
+</div>
 
-            <h3>
-                Product & Brand Pages
-            </h3>
+<h3>
+Personal Websites
+</h3>
 
-            <p>
-                Modern landing pages that showcase
-                products, services and brands.
-            </p>
+<p>
+Create an online identity with a clean personal or portfolio website.
+</p>
 
-        </div>
-
-
-        <div class="card reveal">
-
-            <div class="icon">
-                📱
-            </div>
-
-            <h3>
-                Mobile-Friendly Design
-            </h3>
-
-            <p>
-                Websites designed to look great on
-                phones, tablets and computers.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card reveal">
+<div class="service">
 
-            <div class="icon">
-                ⚡
-            </div>
+<div class="service-number">
+04
+</div>
 
-            <h3>
-                Modern UI
-            </h3>
+<h3>
+Product & Brand Pages
+</h3>
 
-            <p>
-                Clean layouts, smooth interactions and
-                modern visual design for your website.
-            </p>
+<p>
+Showcase products, services and brands with attractive landing pages.
+</p>
 
-        </div>
+</div>
 
-    </div>
+
+<div class="service">
+
+<div class="service-number">
+05
+</div>
+
+<h3>
+Mobile-Friendly Design
+</h3>
+
+<p>
+Websites designed to work smoothly across phones, tablets and computers.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+06
+</div>
+
+<h3>
+Modern UI
+</h3>
+
+<p>
+Clean layouts, strong visuals and modern interfaces that look professional.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -981,170 +785,77 @@ footer strong{
 
 <section id="portfolio">
 
-    <div class="section-title reveal">
+<div class="container reveal">
 
-        <small>
-            03 — Our Portfolio
-        </small>
+<div class="section-label">
+03 — PORTFOLIO
+</div>
 
-        <h2>
-            Work that<br>
-            speaks for itself.
-        </h2>
+<h2 class="section-title">
+Our work.
+</h2>
 
-        <p>
-            Explore some of our website concepts
-            and digital projects.
-        </p>
+<p class="section-text">
+A few examples of the type of websites we can create.
+</p>
 
-    </div>
+<div class="portfolio-grid">
 
 
-    <div class="portfolio-grid">
+<div class="project">
+
+<div class="project-tag">
+DIGITAL STUDIO
+</div>
+
+<h3>
+NyxeBite
+</h3>
+
+<p>
+The official NyxeBite website.
+</p>
+
+</div>
 
 
-        <div class="portfolio-card reveal">
+<div class="project">
 
-            <div class="portfolio-preview">
+<div class="project-tag">
+SALON WEBSITE
+</div>
 
-                <div class="preview-content">
+<h3>
+Catwalk Salon
+</h3>
 
-                    <span>
-                        NYXEBITE
-                    </span>
+<p>
+A modern website concept for a beauty salon.
+</p>
 
-                    <h3>
-                        Creative Studio
-                    </h3>
-
-                    <p>
-                        Digital studio website
-                    </p>
-
-                </div>
-
-            </div>
+</div>
 
 
-            <div class="portfolio-info">
+<div class="project">
 
-                <div>
+<div class="project-tag">
+PERSONAL BRAND
+</div>
 
-                    <h3>
-                        NyxeBite
-                    </h3>
+<h3>
+Creator Website
+</h3>
 
-                    <p>
-                        A modern website concept for
-                        a digital creative studio.
-                    </p>
+<p>
+A clean personal website concept for creators and professionals.
+</p>
 
-                </div>
-
-                <span class="portfolio-tag">
-                    Website
-                </span>
-
-            </div>
-
-        </div>
+</div>
 
 
-        <div class="portfolio-card reveal">
+</div>
 
-            <div class="portfolio-preview salon">
-
-                <div class="preview-content">
-
-                    <span>
-                        CATWALK
-                    </span>
-
-                    <h3>
-                        Salon Website
-                    </h3>
-
-                    <p>
-                        Beauty & lifestyle website
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="portfolio-info">
-
-                <div>
-
-                    <h3>
-                        Catwalk Salon
-                    </h3>
-
-                    <p>
-                        A stylish website concept designed
-                        for a modern beauty salon.
-                    </p>
-
-                </div>
-
-                <span class="portfolio-tag">
-                    Website
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="portfolio-card reveal">
-
-            <div class="portfolio-preview creator">
-
-                <div class="preview-content">
-
-                    <span>
-                        CREATOR
-                    </span>
-
-                    <h3>
-                        Personal Website
-                    </h3>
-
-                    <p>
-                        Personal brand website
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="portfolio-info">
-
-                <div>
-
-                    <h3>
-                        Creator Website
-                    </h3>
-
-                    <p>
-                        A clean personal website concept
-                        for creators and professionals.
-                    </p>
-
-                </div>
-
-                <span class="portfolio-tag">
-                    Website
-                </span>
-
-            </div>
-
-        </div>
-
-
-    </div>
+</div>
 
 </section>
 
@@ -1153,101 +864,91 @@ footer strong{
 
 <section id="how">
 
-    <div class="section-title reveal">
+<div class="container reveal">
 
-        <small>
-            04 — How It Works
-        </small>
+<div class="section-label">
+04 — HOW IT WORKS
+</div>
 
-        <h2>
-            Simple from<br>
-            start to finish.
-        </h2>
+<h2 class="section-title">
+From idea to<br>
+online.
+</h2>
 
-        <p>
-            Getting your website with NyxeBite
-            is simple.
-        </p>
-
-    </div>
+<div class="steps">
 
 
-    <div class="steps">
+<div class="step">
+
+<span>
+01
+</span>
+
+<h3>
+Tell Us Your Idea
+</h3>
+
+<p>
+Tell us about your business, brand or project and what kind of website you want.
+</p>
+
+</div>
 
 
-        <div class="step reveal">
+<div class="step">
 
-            <div class="number">
-                01
-            </div>
+<span>
+02
+</span>
 
-            <h3>
-                Tell Us Your Idea
-            </h3>
+<h3>
+Plan
+</h3>
 
-            <p>
-                Tell us about your business, project
-                and the website you need.
-            </p>
+<p>
+We decide the structure, content and overall look of your website.
+</p>
 
-        </div>
-
-
-        <div class="step reveal">
-
-            <div class="number">
-                02
-            </div>
-
-            <h3>
-                Plan Your Website
-            </h3>
-
-            <p>
-                We'll decide the structure, sections
-                and overall design of your website.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="step reveal">
+<div class="step">
 
-            <div class="number">
-                03
-            </div>
+<span>
+03
+</span>
 
-            <h3>
-                We Build It
-            </h3>
+<h3>
+Build
+</h3>
 
-            <p>
-                Your website is designed and developed
-                around your requirements.
-            </p>
+<p>
+Your website is designed and developed with a modern responsive layout.
+</p>
 
-        </div>
-
-
-        <div class="step reveal">
-
-            <div class="number">
-                04
-            </div>
-
-            <h3>
-                Go Live
-            </h3>
-
-            <p>
-                Once everything is ready, your website
-                can be published online.
-            </p>
-
-        </div>
+</div>
 
 
-    </div>
+<div class="step">
+
+<span>
+04
+</span>
+
+<h3>
+Go Live
+</h3>
+
+<p>
+Your website is ready to share with your customers and audience.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1256,172 +957,209 @@ footer strong{
 
 <section>
 
-    <div class="section-title reveal">
+<div class="container reveal">
 
-        <small>
-            05 — Why NyxeBite
-        </small>
+<div class="why">
 
-        <h2>
-            Built to make<br>
-            you stand out.
-        </h2>
+<div>
 
-    </div>
+<div class="section-label">
+05 — WHY NYXEBITE
+</div>
 
+<h2 class="section-title">
+Built around<br>
+your vision.
+</h2>
 
-    <div class="why">
+<p class="section-text">
+We focus on creating websites that are simple to understand,
+good-looking and useful for your goals.
+</p>
 
-
-        <div class="why-card reveal">
-
-            <h3>
-                ⚡ Modern Design
-            </h3>
-
-            <p>
-                Clean, modern and professional designs
-                made to create a strong first impression.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="why-card reveal">
+<div class="why-list">
 
-            <h3>
-                📱 Mobile Friendly
-            </h3>
+<div class="why-item">
 
-            <p>
-                Your website is designed to work smoothly
-                across phones, tablets and computers.
-            </p>
+<h3>
+✦ Modern Design
+</h3>
 
-        </div>
+<p>
+Clean and attractive interfaces designed for today's web.
+</p>
 
-
-        <div class="why-card reveal">
-
-            <h3>
-                🎯 Built Around You
-            </h3>
-
-            <p>
-                Your website is created around your
-                business, goals and requirements.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="why-card reveal">
+<div class="why-item">
 
-            <h3>
-                🚀 Ready for Growth
-            </h3>
+<h3>
+✦ Mobile Friendly
+</h3>
 
-            <p>
-                Build your online presence today and
-                keep improving it as your project grows.
-            </p>
+<p>
+Your website looks good on mobile phones as well as computers.
+</p>
 
-        </div>
+</div>
 
 
-    </div>
+<div class="why-item">
+
+<h3>
+✦ Built Around You
+</h3>
+
+<p>
+Your website is created according to your business and requirements.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<h3>
+✦ Ready for Growth
+</h3>
+
+<p>
+Start simple and improve your website as your business grows.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- CTA -->
 
-<section class="cta">
+<section>
 
-    <div class="reveal">
+<div class="container reveal">
 
-        <h2>
-            Ready to go online?
-        </h2>
+<div class="cta">
 
-        <p>
-            Tell us about your idea and let's build
-            a website that represents your brand.
-        </p>
+<h2>
+Ready to go online?
+</h2>
 
-        <div class="buttons">
+<p>
+Let's turn your idea into a professional website.
+</p>
 
-            <a href="#contact" class="btn primary">
-                Start a Project →
-            </a>
+<div class="buttons" style="justify-content:center;">
 
-            <a href="#portfolio" class="btn secondary">
-                See Our Work
-            </a>
+<a href="#contact" class="btn primary">
+Start a Project →
+</a>
 
-        </div>
+<a href="#portfolio" class="btn secondary">
+See Our Work
+</a>
 
-    </div>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- CONTACT -->
 
-<section id="contact" class="contact">
+<section id="contact">
 
-    <div class="section-title reveal"
-         style="margin-left:auto;margin-right:auto;">
+<div class="container reveal">
 
-        <small>
-            06 — Contact
-        </small>
+<div class="contact">
 
-        <h2>
-            Let's build<br>
-            something great.
-        </h2>
+<div>
 
-        <p>
-            Have a business, idea or project that
-            needs a website? Get in touch.
-        </p>
+<div class="section-label">
+06 — CONTACT
+</div>
 
-    </div>
+<h2 class="section-title">
+Let's build<br>
+something great.
+</h2>
+
+<p class="section-text">
+For website projects, collaborations and enquiries,
+contact NyxeBite through email or WhatsApp.
+</p>
+
+</div>
 
 
-    <div class="contact-box reveal">
+<div class="contact-card">
 
-        <p>
-            Email
-        </p>
 
-        <strong>
-            singhshresth128@gmail.com
-        </strong>
+<div class="contact-item">
 
-        <p>
-            For website projects, collaborations
-            and enquiries.
-        </p>
+<p>
+EMAIL
+</p>
 
-        <div class="contact-buttons">
+<strong>
+singhshresth128@gmail.com
+</strong>
 
-            <a
-                href="mailto:singhshresth128@gmail.com"
-                class="btn primary">
-                Email NyxeBite →
-            </a>
+</div>
 
-            <a
-                href="#portfolio"
-                class="btn secondary">
-                View Portfolio
-            </a>
 
-        </div>
+<div class="contact-item">
 
-    </div>
+<p>
+WHATSAPP
+</p>
+
+<strong>
+8189027132
+</strong>
+
+</div>
+
+
+<div class="contact-buttons">
+
+<a
+href="https://wa.me/918189027132"
+target="_blank"
+rel="noopener noreferrer"
+class="btn primary"
+>
+WhatsApp NyxeBite →
+</a>
+
+
+<a
+href="mailto:singhshresth128@gmail.com"
+class="btn secondary"
+>
+Email NyxeBite →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1430,13 +1168,21 @@ footer strong{
 
 <footer>
 
-    <div>
-        © 2026 <strong>NyxeBite</strong>. All rights reserved.
-    </div>
+<div class="container">
 
-    <div>
-        Built with creativity ✦
-    </div>
+<div class="footer-inner">
+
+<div>
+© 2026 NyxeBite. All rights reserved.
+</div>
+
+<div>
+Websites • Design • Digital
+</div>
+
+</div>
+
+</div>
 
 </footer>
 
@@ -1448,30 +1194,27 @@ footer strong{
 const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
-    (entries) => {
+(entries) => {
 
-        entries.forEach((entry) => {
+entries.forEach(entry => {
 
-            if(entry.isIntersecting){
+if(entry.isIntersecting){
 
-                entry.target.classList.add("active");
+entry.target.classList.add("active");
 
-            }
+}
 
-        });
-
-    },
-    {
-        threshold:0.12
-    }
-);
-
-reveals.forEach((element) => {
-    observer.observe(element);
 });
 
-</script>
+},
+{
+threshold:0.12
+}
+);
 
+reveals.forEach(el => observer.observe(el));
+
+</script>
 
 </body>
 </html>
