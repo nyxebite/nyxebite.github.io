@@ -8,11 +8,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NyxeBite — Where Clients Meet Creators</title>
+<title>NyxeBite — Websites Built for Your Business</title>
 
-<meta name="description" content="NyxeBite is a creative marketplace connecting clients with talented editors and digital creators.">
+<meta name="description" content="NyxeBite creates modern, professional websites for businesses, brands and creators.">
 
-<meta name="keywords" content="NyxeBite, video editors, freelance editors, creators, editing marketplace, website design">
+<meta name="keywords" content="NyxeBite, website design, business websites, professional websites, website development">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,6 @@
 :root{
     --bg:#050507;
     --card:#0d0d13;
-    --card2:#111118;
     --text:#f7f7fb;
     --muted:#9696a8;
     --line:rgba(255,255,255,.09);
@@ -264,49 +263,46 @@ section{
 }
 
 
-/* CLIENT / EDITOR */
+/* CLIENT */
 
-.choice-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
+.client-box{
+    max-width:1000px;
+    margin:auto;
 
-.choice{
-    padding:45px;
-
-    min-height:330px;
+    padding:50px;
 
     border:1px solid var(--line);
     border-radius:28px;
 
     background:
-    radial-gradient(circle at 80% 20%,rgba(139,92,246,.14),transparent 35%),
+    radial-gradient(circle at 80% 20%,
+    rgba(139,92,246,.14),
+    transparent 35%),
     var(--card);
 
     transition:.4s;
 }
 
-.choice:hover{
-    transform:translateY(-8px);
+.client-box:hover{
+    transform:translateY(-6px);
     border-color:rgba(139,92,246,.4);
 }
 
-.choice-icon{
-    font-size:40px;
+.client-icon{
+    font-size:45px;
     margin-bottom:25px;
 }
 
-.choice h3{
-    font-size:30px;
-    margin-bottom:14px;
+.client-box h3{
+    font-size:32px;
+    margin-bottom:15px;
 }
 
-.choice p{
+.client-box p{
     color:var(--muted);
-    line-height:1.7;
-    max-width:480px;
-    margin-bottom:25px;
+    line-height:1.8;
+    max-width:700px;
+    margin-bottom:28px;
 }
 
 
@@ -465,81 +461,6 @@ section{
 
     color:#aaa;
     font-size:10px;
-}
-
-
-/* EDITORS */
-
-.editors{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.editor{
-    padding:28px;
-
-    border:1px solid var(--line);
-    border-radius:22px;
-
-    background:var(--card);
-
-    transition:.4s;
-}
-
-.editor:hover{
-    transform:translateY(-6px);
-    border-color:rgba(139,92,246,.4);
-}
-
-.avatar{
-    width:58px;
-    height:58px;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:50%;
-
-    background:linear-gradient(135deg,#8b5cf6,#06b6d4);
-
-    font-size:22px;
-    font-weight:800;
-
-    margin-bottom:18px;
-}
-
-.editor h3{
-    font-size:19px;
-}
-
-.role{
-    color:#a78bfa;
-    font-size:12px;
-    margin-top:5px;
-}
-
-.editor p{
-    color:var(--muted);
-    font-size:13px;
-    line-height:1.6;
-    margin:15px 0;
-}
-
-.tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:7px;
-}
-
-.tag{
-    padding:6px 9px;
-
-    border:1px solid var(--line);
-    border-radius:20px;
-
-    font-size:10px;
-    color:#aaa;
 }
 
 
@@ -735,7 +656,6 @@ footer strong{
         padding:80px 5%;
     }
 
-    .choice-grid,
     .why{
         grid-template-columns:1fr;
     }
@@ -745,10 +665,6 @@ footer strong{
     }
 
     .portfolio-grid{
-        grid-template-columns:1fr;
-    }
-
-    .editors{
         grid-template-columns:1fr;
     }
 
@@ -775,7 +691,7 @@ footer strong{
         font-size:55px;
     }
 
-    .choice{
+    .client-box{
         padding:30px;
     }
 
@@ -811,7 +727,7 @@ footer strong{
     <ul class="nav-links">
 
         <li>
-            <a href="#find">Find Editor</a>
+            <a href="#find">Get Started</a>
         </li>
 
         <li>
@@ -823,17 +739,13 @@ footer strong{
         </li>
 
         <li>
-            <a href="#editors">Editors</a>
-        </li>
-
-        <li>
             <a href="#how">How It Works</a>
         </li>
 
     </ul>
 
-    <a href="#join" class="nav-btn">
-        Join NyxeBite
+    <a href="#contact" class="nav-btn">
+        Start a Project
     </a>
 
 </nav>
@@ -846,30 +758,31 @@ footer strong{
     <div class="hero-content reveal">
 
         <div class="badge">
-            ✦ THE CREATIVE MARKETPLACE
+            ✦ DIGITAL CREATIVE STUDIO
         </div>
 
         <h1>
-            Where Clients<br>
+            Your Vision.<br>
             <span class="gradient">
-                Meet Creators.
+                Our Creation.
             </span>
         </h1>
 
         <p>
-            Find talented editors for your next project,
-            or showcase your skills and discover new
-            creative opportunities.
+            Need a professional website for your business,
+            brand or personal project? NyxeBite creates
+            modern digital experiences designed to make
+            your online presence stand out.
         </p>
 
         <div class="buttons">
 
-            <a href="#find" class="btn primary">
-                Find an Editor →
+            <a href="#contact" class="btn primary">
+                Start Your Website →
             </a>
 
-            <a href="#join" class="btn secondary">
-                Join as an Editor
+            <a href="#portfolio" class="btn secondary">
+                View Our Work
             </a>
 
         </div>
@@ -879,76 +792,48 @@ footer strong{
 </header>
 
 
-<!-- CLIENT / EDITOR -->
+<!-- CLIENT -->
 
 <section id="find">
 
     <div class="section-title reveal">
 
         <small>
-            01 — Choose your path
+            01 — For Clients
         </small>
 
         <h2>
-            Built for both<br>
-            sides of creativity.
+            Your website<br>
+            starts here.
         </h2>
 
         <p>
-            Whether you need content created or you're
-            ready to create it, NyxeBite connects the right
-            people together.
+            Tell us what you need and we'll help turn
+            your idea into a professional website.
         </p>
 
     </div>
 
 
-    <div class="choice-grid">
+    <div class="client-box reveal">
 
-        <div class="choice reveal">
-
-            <div class="choice-icon">
-                👤
-            </div>
-
-            <h3>
-                I'm a Client
-            </h3>
-
-            <p>
-                Looking for an editor? Discover talented
-                creators, explore their work and find
-                someone who matches your project.
-            </p>
-
-            <a href="#services" class="btn primary">
-                Find an Editor →
-            </a>
-
+        <div class="client-icon">
+            👤
         </div>
 
+        <h3>
+            Looking for a Website?
+        </h3>
 
-        <div class="choice reveal">
+        <p>
+            Whether you're running a salon, small business,
+            personal brand or online project, NyxeBite can
+            create a website that represents you online.
+        </p>
 
-            <div class="choice-icon">
-                🎬
-            </div>
-
-            <h3>
-                I'm an Editor
-            </h3>
-
-            <p>
-                Have editing skills? Build your profile,
-                showcase your portfolio and get discovered
-                by people looking for creative talent.
-            </p>
-
-            <a href="#join" class="btn secondary">
-                Become an Editor →
-            </a>
-
-        </div>
+        <a href="#contact" class="btn primary">
+            Get Your Website →
+        </a>
 
     </div>
 
@@ -962,18 +847,17 @@ footer strong{
     <div class="section-title reveal">
 
         <small>
-            02 — Creative services
+            02 — Our Services
         </small>
 
         <h2>
-            Find the right<br>
-            creative skill.
+            Everything you need<br>
+            to go online.
         </h2>
 
         <p>
-            From short-form content to complete YouTube
-            videos, discover creators for different types
-            of projects.
+            We create modern websites for businesses,
+            brands, creators and personal projects.
         </p>
 
     </div>
@@ -984,16 +868,16 @@ footer strong{
         <div class="card reveal">
 
             <div class="icon">
-                🎬
+                🌐
             </div>
 
             <h3>
-                Reels & Shorts
+                Business Websites
             </h3>
 
             <p>
-                Fast-paced edits for Instagram Reels,
-                YouTube Shorts and other short-form content.
+                Professional websites designed to help
+                businesses build a strong online presence.
             </p>
 
         </div>
@@ -1002,16 +886,16 @@ footer strong{
         <div class="card reveal">
 
             <div class="icon">
-                ▶️
+                💇
             </div>
 
             <h3>
-                YouTube Editing
+                Salon & Local Business
             </h3>
 
             <p>
-                Long-form videos, storytelling, subtitles,
-                transitions and engaging edits.
+                Attractive websites for salons, shops,
+                restaurants and local businesses.
             </p>
 
         </div>
@@ -1020,16 +904,16 @@ footer strong{
         <div class="card reveal">
 
             <div class="icon">
-                🖼️
+                👤
             </div>
 
             <h3>
-                Thumbnails
+                Personal Websites
             </h3>
 
             <p>
-                Eye-catching thumbnails designed to make
-                your content stand out.
+                Clean personal websites for portfolios,
+                creators, students and professionals.
             </p>
 
         </div>
@@ -1038,16 +922,16 @@ footer strong{
         <div class="card reveal">
 
             <div class="icon">
-                🎮
+                🛍️
             </div>
 
             <h3>
-                Gaming
+                Product & Brand Pages
             </h3>
 
             <p>
-                Gaming highlights, montages, funny moments
-                and stream content.
+                Modern landing pages that showcase
+                products, services and brands.
             </p>
 
         </div>
@@ -1060,12 +944,12 @@ footer strong{
             </div>
 
             <h3>
-                Social Media
+                Mobile-Friendly Design
             </h3>
 
             <p>
-                Creative content for brands, influencers
-                and social media creators.
+                Websites designed to look great on
+                phones, tablets and computers.
             </p>
 
         </div>
@@ -1074,16 +958,16 @@ footer strong{
         <div class="card reveal">
 
             <div class="icon">
-                ✨
+                ⚡
             </div>
 
             <h3>
-                Motion Graphics
+                Modern UI
             </h3>
 
             <p>
-                Animated graphics, titles and visual
-                effects for professional content.
+                Clean layouts, smooth interactions and
+                modern visual design for your website.
             </p>
 
         </div>
@@ -1109,8 +993,8 @@ footer strong{
         </h2>
 
         <p>
-            Explore creative projects and digital
-            experiences built through NyxeBite.
+            Explore some of our website concepts
+            and digital projects.
         </p>
 
     </div>
@@ -1118,8 +1002,6 @@ footer strong{
 
     <div class="portfolio-grid">
 
-
-        <!-- PROJECT 1 -->
 
         <div class="portfolio-card reveal">
 
@@ -1132,11 +1014,11 @@ footer strong{
                     </span>
 
                     <h3>
-                        Creative Marketplace
+                        Creative Studio
                     </h3>
 
                     <p>
-                        Digital platform concept
+                        Digital studio website
                     </p>
 
                 </div>
@@ -1153,8 +1035,8 @@ footer strong{
                     </h3>
 
                     <p>
-                        A modern creative marketplace
-                        connecting clients with creators.
+                        A modern website concept for
+                        a digital creative studio.
                     </p>
 
                 </div>
@@ -1167,8 +1049,6 @@ footer strong{
 
         </div>
 
-
-        <!-- PROJECT 2 -->
 
         <div class="portfolio-card reveal">
 
@@ -1217,8 +1097,6 @@ footer strong{
         </div>
 
 
-        <!-- PROJECT 3 -->
-
         <div class="portfolio-card reveal">
 
             <div class="portfolio-preview creator">
@@ -1230,7 +1108,7 @@ footer strong{
                     </span>
 
                     <h3>
-                        Creator Portfolio
+                        Personal Website
                     </h3>
 
                     <p>
@@ -1247,162 +1125,18 @@ footer strong{
                 <div>
 
                     <h3>
-                        Creator Portfolio
+                        Creator Website
                     </h3>
 
                     <p>
-                        A clean personal portfolio concept
-                        for digital creators and editors.
+                        A clean personal website concept
+                        for creators and professionals.
                     </p>
 
                 </div>
 
                 <span class="portfolio-tag">
-                    Portfolio
-                </span>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- EDITORS -->
-
-<section id="editors">
-
-    <div class="section-title reveal">
-
-        <small>
-            04 — Discover talent
-        </small>
-
-        <h2>
-            Meet creative talent.
-        </h2>
-
-        <p>
-            Example editor profiles for the NyxeBite
-            marketplace.
-        </p>
-
-    </div>
-
-
-    <div class="editors">
-
-
-        <div class="editor reveal">
-
-            <div class="avatar">
-                AR
-            </div>
-
-            <h3>
-                Alex Raj
-            </h3>
-
-            <div class="role">
-                Video Editor
-            </div>
-
-            <p>
-                Specializes in short-form content,
-                cinematic edits and social media videos.
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">
-                    Reels
-                </span>
-
-                <span class="tag">
-                    Shorts
-                </span>
-
-                <span class="tag">
-                    Premiere Pro
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="editor reveal">
-
-            <div class="avatar">
-                KS
-            </div>
-
-            <h3>
-                Kabir Sharma
-            </h3>
-
-            <div class="role">
-                YouTube Editor
-            </div>
-
-            <p>
-                Focused on storytelling, YouTube videos,
-                subtitles and engaging edits.
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">
-                    YouTube
-                </span>
-
-                <span class="tag">
-                    Storytelling
-                </span>
-
-                <span class="tag">
-                    Editing
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="editor reveal">
-
-            <div class="avatar">
-                RV
-            </div>
-
-            <h3>
-                Riya Verma
-            </h3>
-
-            <div class="role">
-                Creative Editor
-            </div>
-
-            <p>
-                Creates aesthetic social media content,
-                thumbnails and creative visuals.
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">
-                    Design
-                </span>
-
-                <span class="tag">
-                    Thumbnails
-                </span>
-
-                <span class="tag">
-                    Social
+                    Website
                 </span>
 
             </div>
@@ -1422,7 +1156,7 @@ footer strong{
     <div class="section-title reveal">
 
         <small>
-            05 — How it works
+            04 — How It Works
         </small>
 
         <h2>
@@ -1431,8 +1165,8 @@ footer strong{
         </h2>
 
         <p>
-            NyxeBite is designed to make connecting
-            clients and creators simple.
+            Getting your website with NyxeBite
+            is simple.
         </p>
 
     </div>
@@ -1448,12 +1182,12 @@ footer strong{
             </div>
 
             <h3>
-                Post a Project
+                Tell Us Your Idea
             </h3>
 
             <p>
-                Tell creators what you need and
-                describe your project.
+                Tell us about your business, project
+                and the website you need.
             </p>
 
         </div>
@@ -1466,12 +1200,12 @@ footer strong{
             </div>
 
             <h3>
-                Get Applications
+                Plan Your Website
             </h3>
 
             <p>
-                Editors discover your project and
-                show why they're a good fit.
+                We'll decide the structure, sections
+                and overall design of your website.
             </p>
 
         </div>
@@ -1484,12 +1218,12 @@ footer strong{
             </div>
 
             <h3>
-                Choose Your Editor
+                We Build It
             </h3>
 
             <p>
-                Explore profiles and choose the
-                creator that fits your needs.
+                Your website is designed and developed
+                around your requirements.
             </p>
 
         </div>
@@ -1502,12 +1236,12 @@ footer strong{
             </div>
 
             <h3>
-                Create Together
+                Go Live
             </h3>
 
             <p>
-                Work together and turn your idea
-                into great content.
+                Once everything is ready, your website
+                can be published online.
             </p>
 
         </div>
@@ -1525,12 +1259,12 @@ footer strong{
     <div class="section-title reveal">
 
         <small>
-            06 — Why NyxeBite
+            05 — Why NyxeBite
         </small>
 
         <h2>
-            More than<br>
-            just a marketplace.
+            Built to make<br>
+            you stand out.
         </h2>
 
     </div>
@@ -1542,12 +1276,12 @@ footer strong{
         <div class="why-card reveal">
 
             <h3>
-                ⚡ Fast Connections
+                ⚡ Modern Design
             </h3>
 
             <p>
-                Help clients discover creative talent
-                without making the search complicated.
+                Clean, modern and professional designs
+                made to create a strong first impression.
             </p>
 
         </div>
@@ -1556,12 +1290,12 @@ footer strong{
         <div class="why-card reveal">
 
             <h3>
-                🎯 Skill-Based Discovery
+                📱 Mobile Friendly
             </h3>
 
             <p>
-                Find creators based on the exact type
-                of content and skills you need.
+                Your website is designed to work smoothly
+                across phones, tablets and computers.
             </p>
 
         </div>
@@ -1570,12 +1304,12 @@ footer strong{
         <div class="why-card reveal">
 
             <h3>
-                💼 Opportunities for Editors
+                🎯 Built Around You
             </h3>
 
             <p>
-                Give editors a place to showcase their
-                work and build their creative reputation.
+                Your website is created around your
+                business, goals and requirements.
             </p>
 
         </div>
@@ -1584,12 +1318,12 @@ footer strong{
         <div class="why-card reveal">
 
             <h3>
-                🚀 Built for Creators
+                🚀 Ready for Growth
             </h3>
 
             <p>
-                NyxeBite aims to make the creator-client
-                relationship easier and more accessible.
+                Build your online presence today and
+                keep improving it as your project grows.
             </p>
 
         </div>
@@ -1602,28 +1336,27 @@ footer strong{
 
 <!-- CTA -->
 
-<section class="cta" id="join">
+<section class="cta">
 
     <div class="reveal">
 
         <h2>
-            Ready to create?
+            Ready to go online?
         </h2>
 
         <p>
-            Whether you're looking for creative talent
-            or you're ready to showcase your skills,
-            NyxeBite is where the journey begins.
+            Tell us about your idea and let's build
+            a website that represents your brand.
         </p>
 
         <div class="buttons">
 
-            <a href="#find" class="btn primary">
-                Find an Editor →
+            <a href="#contact" class="btn primary">
+                Start a Project →
             </a>
 
-            <a href="#contact" class="btn secondary">
-                Join as an Editor
+            <a href="#portfolio" class="btn secondary">
+                See Our Work
             </a>
 
         </div>
@@ -1641,7 +1374,7 @@ footer strong{
          style="margin-left:auto;margin-right:auto;">
 
         <small>
-            07 — Contact
+            06 — Contact
         </small>
 
         <h2>
@@ -1650,8 +1383,8 @@ footer strong{
         </h2>
 
         <p>
-            Have a project, collaboration idea or want
-            to join NyxeBite? Get in touch.
+            Have a business, idea or project that
+            needs a website? Get in touch.
         </p>
 
     </div>
@@ -1668,14 +1401,14 @@ footer strong{
         </strong>
 
         <p>
-            For projects, collaborations and creator
-            opportunities.
+            For website projects, collaborations
+            and enquiries.
         </p>
 
         <div class="contact-buttons">
 
             <a
-                href="mailto:hello@nyxebite.com"
+                href="mailto:singhshresth128@gmail.com"
                 class="btn primary">
                 Email NyxeBite →
             </a>
