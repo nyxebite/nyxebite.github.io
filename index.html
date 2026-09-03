@@ -12,9 +12,16 @@
 
 <meta name="description" content="NyxeBite builds modern, premium and futuristic websites for businesses, brands and creators.">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
     margin:0;
@@ -27,8 +34,8 @@ html{
 }
 
 body{
-    background:#050507;
-    color:white;
+    background:#030305;
+    color:#fff;
     font-family:'Inter',sans-serif;
     overflow-x:hidden;
 }
@@ -38,75 +45,177 @@ a{
     text-decoration:none;
 }
 
+
+/* =====================================================
+   AMBIENT BACKGROUND
+===================================================== */
+
 body::before{
     content:"";
     position:fixed;
-    width:700px;
-    height:700px;
-    background:#6d28d9;
-    filter:blur(220px);
-    opacity:.13;
-    top:-250px;
-    left:50%;
-    transform:translateX(-50%);
-    z-index:-2;
+
+    width:650px;
+    height:650px;
+
+    top:-300px;
+    left:-250px;
+
+    background:#7c3aed;
+
+    filter:blur(180px);
+
+    opacity:.16;
+
+    pointer-events:none;
+
+    z-index:-5;
 }
+
+body::after{
+    content:"";
+    position:fixed;
+
+    width:600px;
+    height:600px;
+
+    right:-300px;
+    bottom:-300px;
+
+    background:#4f46e5;
+
+    filter:blur(190px);
+
+    opacity:.13;
+
+    pointer-events:none;
+
+    z-index:-5;
+}
+
+
+/* GRID */
 
 .grid-bg{
     position:fixed;
+
     inset:0;
-    z-index:-3;
-    opacity:.15;
+
+    z-index:-6;
+
+    opacity:.08;
+
     background-image:
-    linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
-    background-size:60px 60px;
-    mask-image:linear-gradient(to bottom,black,transparent 80%);
+    linear-gradient(
+        rgba(255,255,255,.08) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.08) 1px,
+        transparent 1px
+    );
+
+    background-size:65px 65px;
+
+    mask-image:
+    linear-gradient(
+        to bottom,
+        black,
+        transparent 85%
+    );
 }
 
-/* NAVBAR */
+
+/* NOISE */
+
+.noise{
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:1000;
+
+    opacity:.025;
+
+    background-image:url(
+        "data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E"
+    );
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
 
 nav{
     position:fixed;
+
     top:18px;
     left:50%;
+
     transform:translateX(-50%);
+
     width:92%;
     max-width:1100px;
+
     z-index:999;
+
     padding:14px 18px;
-    border:1px solid rgba(255,255,255,.1);
-    background:rgba(10,10,14,.65);
-    backdrop-filter:blur(20px);
+
     border-radius:22px;
-    box-shadow:0 20px 60px rgba(0,0,0,.3);
+
+    border:1px solid rgba(255,255,255,.14);
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.105),
+        rgba(255,255,255,.025)
+    );
+
+    backdrop-filter:blur(28px);
+    -webkit-backdrop-filter:blur(28px);
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.18),
+        0 25px 80px rgba(0,0,0,.4);
 }
 
 .nav{
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 }
 
 .logo{
     font-size:22px;
+
     font-weight:900;
+
     letter-spacing:-1px;
 }
 
 .logo span{
-    color:#9b6cff;
+    color:#a678ff;
 }
 
 .navlinks{
     display:flex;
+
     gap:25px;
+
     align-items:center;
 }
 
 .navlinks a{
     font-size:13px;
+
     color:#aaa;
+
     transition:.3s;
 }
 
@@ -116,17 +225,34 @@ nav{
 
 .navbutton{
     padding:10px 17px;
+
     border-radius:12px;
-    background:#fff;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff,
+        #ded6ff
+    );
+
     color:#08080a!important;
-    font-weight:700;
+
+    font-weight:800;
+
+    box-shadow:
+        0 0 30px rgba(167,124,255,.15);
 }
 
-/* GENERAL */
+
+/* =====================================================
+   GENERAL
+===================================================== */
 
 .container{
     width:90%;
+
     max-width:1150px;
+
     margin:auto;
 }
 
@@ -135,16 +261,22 @@ section{
 }
 
 .label{
-    color:#9b6cff;
+    color:#a678ff;
+
     font-size:12px;
+
     font-weight:800;
+
     letter-spacing:3px;
+
     margin-bottom:18px;
 }
 
 .title{
     font-size:clamp(42px,6vw,75px);
+
     line-height:.98;
+
     letter-spacing:-4px;
 }
 
@@ -152,193 +284,424 @@ section{
     color:#90909a;
 }
 
-/* HERO */
+
+/* =====================================================
+   GRADIENT TEXT
+===================================================== */
+
+.gradient{
+    background:
+    linear-gradient(
+        100deg,
+        #fff,
+        #c7aaff,
+        #8755ff,
+        #fff
+    );
+
+    background-size:250%;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:gradientMove 6s linear infinite;
+}
+
+@keyframes gradientMove{
+
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:250%;
+    }
+
+}
+
+
+/* =====================================================
+   UNIVERSAL GLASS
+===================================================== */
+
+.glass{
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.105),
+        rgba(255,255,255,.035) 45%,
+        rgba(255,255,255,.018)
+    );
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.16),
+        inset 0 -1px rgba(255,255,255,.025),
+        0 25px 80px rgba(0,0,0,.3);
+}
+
+
+/* GLASS SHINE */
+
+.glass::before{
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:140%;
+
+    top:-20%;
+    left:-300px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.15),
+        transparent
+    );
+
+    transform:skewX(-18deg);
+
+    transition:1s;
+
+    pointer-events:none;
+}
+
+.glass:hover::before{
+    left:130%;
+}
+
+
+/* TOP LIGHT */
+
+.glass::after{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:8%;
+
+    width:84%;
+
+    height:1px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    opacity:.65;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
     min-height:100vh;
+
     display:flex;
+
     align-items:center;
+
     padding-top:120px;
+
     position:relative;
 }
 
 .hero-content{
     text-align:center;
+
     width:100%;
 }
 
 .hero-badge{
     display:inline-flex;
+
     align-items:center;
+
     gap:8px;
+
     padding:9px 15px;
+
     border:1px solid rgba(155,108,255,.35);
-    background:rgba(155,108,255,.08);
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(155,108,255,.14),
+        rgba(255,255,255,.035)
+    );
+
+    backdrop-filter:blur(20px);
+
     border-radius:100px;
+
     color:#c8b5ff;
+
     font-size:11px;
+
     font-weight:700;
+
     letter-spacing:1.5px;
+
     margin-bottom:30px;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.15),
+        0 0 35px rgba(124,58,237,.1);
 }
 
 .dot{
     width:7px;
+
     height:7px;
+
     border-radius:50%;
-    background:#9b6cff;
-    box-shadow:0 0 15px #9b6cff;
+
+    background:#a678ff;
+
+    box-shadow:
+        0 0 10px #a678ff,
+        0 0 25px #7c3aed;
+
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.35;
+    }
+
 }
 
 .hero h1{
     font-size:clamp(58px,10vw,125px);
+
     line-height:.87;
+
     letter-spacing:-8px;
+
     max-width:1000px;
+
     margin:auto;
-}
-
-.gradient{
-    background:linear-gradient(
-        90deg,
-        #fff,
-        #a77cff,
-        #7040ff,
-        #fff
-    );
-    background-size:250%;
-    -webkit-background-clip:text;
-    color:transparent;
-    animation:gradient 5s linear infinite;
-}
-
-@keyframes gradient{
-    0%{background-position:0%}
-    100%{background-position:250%}
 }
 
 .hero p{
     max-width:650px;
+
     margin:35px auto;
+
     color:#9999a4;
+
     font-size:17px;
+
     line-height:1.8;
 }
 
 .hero-buttons{
     display:flex;
+
     justify-content:center;
+
     gap:14px;
+
     flex-wrap:wrap;
 }
 
+
+/* BUTTONS */
+
 .btn{
     padding:15px 23px;
+
     border-radius:14px;
+
     font-size:14px;
+
     font-weight:800;
+
     transition:.35s;
+
     display:inline-flex;
+
     align-items:center;
+
     gap:8px;
 }
 
 .primary{
-    background:white;
+    background:
+    linear-gradient(
+        135deg,
+        #fff,
+        #ded6ff
+    );
+
     color:#050507;
-    box-shadow:0 0 40px rgba(255,255,255,.12);
+
+    box-shadow:
+        0 0 40px rgba(255,255,255,.12),
+        inset 0 1px rgba(255,255,255,.8);
 }
 
 .primary:hover{
     transform:translateY(-5px) scale(1.02);
-    box-shadow:0 15px 50px rgba(255,255,255,.2);
+
+    box-shadow:
+        0 18px 60px rgba(167,124,255,.25);
 }
 
 .secondary{
-    border:1px solid rgba(255,255,255,.12);
-    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.13);
+
+    background:
+        rgba(255,255,255,.045);
+
+    backdrop-filter:blur(18px);
 }
 
 .secondary:hover{
-    background:rgba(255,255,255,.08);
-    transform:translateY(-5px);
-}
-
-/* 3D ORB */
-
-.scene{
-    width:280px;
-    height:280px;
-    margin:80px auto 0;
-    perspective:900px;
-}
-
-.orb{
-    width:230px;
-    height:230px;
-    margin:auto;
-    border-radius:50%;
-    position:relative;
-    transform-style:preserve-3d;
     background:
-    radial-gradient(circle at 30% 25%,
-    #ffffff 0%,
-    #c6adff 7%,
-    #7142ff 30%,
-    #240b62 65%,
-    #07030e 100%);
-    box-shadow:
-    0 0 50px #6d35ff,
-    0 0 120px rgba(109,53,255,.4),
-    inset -30px -30px 60px rgba(0,0,0,.7);
-    animation:float 5s ease-in-out infinite;
+        rgba(255,255,255,.09);
+
+    transform:translateY(-5px);
+
+    border-color:rgba(255,255,255,.25);
 }
 
-.orb::before{
-    content:"";
-    position:absolute;
-    inset:18px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,.4);
-    transform:translateZ(30px);
-}
 
-.orb::after{
-    content:"NYXE";
-    position:absolute;
-    inset:0;
+/* =====================================================
+   HERO GLASS PANEL
+===================================================== */
+
+.hero-panel{
+    max-width:900px;
+
+    margin:75px auto 0;
+
+    min-height:150px;
+
+    border-radius:28px;
+
+    padding:25px;
+
     display:flex;
-    align-items:center;
+
     justify-content:center;
-    font-size:27px;
-    font-weight:900;
-    letter-spacing:5px;
-    color:rgba(255,255,255,.7);
-    transform:translateZ(45px);
+
+    align-items:center;
+
+    gap:14px;
+
+    flex-wrap:wrap;
 }
 
-@keyframes float{
-    0%,100%{
-        transform:rotateX(12deg) rotateY(-15deg) translateY(0);
-    }
-    50%{
-        transform:rotateX(-10deg) rotateY(20deg) translateY(-25px);
-    }
+.hero-panel::before{
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:120px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:#8b5cf6;
+
+    filter:blur(100px);
+
+    opacity:.14;
 }
 
-/* STATS */
+.panel-item{
+    position:relative;
+
+    padding:17px 22px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    background:
+        rgba(255,255,255,.045);
+
+    color:#9999a5;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1.5px;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.1);
+
+    transition:.35s;
+}
+
+.panel-item:hover{
+    color:white;
+
+    background:
+        rgba(167,124,255,.13);
+
+    border-color:
+        rgba(167,124,255,.35);
+
+    transform:translateY(-4px);
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
 
 .stats{
     margin-top:50px;
+
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     border-top:1px solid rgba(255,255,255,.08);
+
     border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .stat{
     padding:30px;
+
     text-align:center;
+
     border-right:1px solid rgba(255,255,255,.08);
 }
 
@@ -348,177 +711,274 @@ section{
 
 .stat strong{
     display:block;
+
     font-size:30px;
+
+    margin-bottom:5px;
 }
 
 .stat span{
     color:#777782;
+
     font-size:12px;
+
+    letter-spacing:1px;
 }
 
-/* SECTION HEAD */
+
+/* =====================================================
+   SECTION HEAD
+===================================================== */
 
 .section-head{
     max-width:700px;
+
     margin-bottom:55px;
 }
 
-/* GLASS */
 
-.glass{
-    background:linear-gradient(
-        145deg,
-        rgba(255,255,255,.07),
-        rgba(255,255,255,.025)
-    );
-    border:1px solid rgba(255,255,255,.09);
-    backdrop-filter:blur(15px);
-    box-shadow:
-    inset 0 1px rgba(255,255,255,.06),
-    0 25px 80px rgba(0,0,0,.25);
-}
-
-/* SERVICES */
+/* =====================================================
+   SERVICES
+===================================================== */
 
 .services{
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:20px;
 }
 
 .service{
     padding:32px;
+
     min-height:260px;
+
     border-radius:24px;
-    position:relative;
-    overflow:hidden;
-    transition:.5s;
+
+    transition:.45s;
+
     transform-style:preserve-3d;
 }
 
 .service:hover{
     transform:
-    perspective(800px)
-    rotateX(5deg)
-    rotateY(-5deg)
-    translateY(-10px);
-    border-color:rgba(155,108,255,.4);
+        translateY(-10px)
+        scale(1.015);
+
+    border-color:
+        rgba(155,108,255,.4);
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.18),
+        0 30px 90px rgba(76,29,149,.2);
 }
 
 .service-number{
     font-size:12px;
+
     color:#9b6cff;
+
     font-weight:800;
 }
 
 .service-icon{
-    font-size:35px;
+    width:54px;
+
+    height:54px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
+
     margin:30px 0 20px;
+
+    border-radius:17px;
+
+    color:#d0bdff;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(167,124,255,.18),
+        rgba(255,255,255,.04)
+    );
+
+    border:1px solid rgba(255,255,255,.11);
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.17),
+        0 10px 30px rgba(76,29,149,.1);
 }
 
 .service h3{
     font-size:21px;
+
     margin-bottom:10px;
 }
 
 .service p{
     color:#858590;
+
     font-size:13px;
+
     line-height:1.7;
 }
 
-/* PORTFOLIO */
+
+/* =====================================================
+   PORTFOLIO
+===================================================== */
 
 .portfolio{
     display:grid;
+
     grid-template-columns:1.4fr 1fr;
+
     gap:20px;
 }
 
 .project{
     min-height:350px;
+
     border-radius:25px;
+
     padding:30px;
+
     position:relative;
+
     overflow:hidden;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:flex-end;
-    transition:.5s;
+
+    transition:.45s;
 }
 
 .project:hover{
-    transform:translateY(-8px);
+    transform:translateY(-9px);
+
+    border-color:
+        rgba(155,108,255,.38);
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.2),
+        0 30px 90px rgba(76,29,149,.2);
 }
+
+
+/* NO CIRCLES */
 
 .project.one{
     background:
-    radial-gradient(circle at 70% 20%,#6638d9,transparent 30%),
-    linear-gradient(145deg,#191022,#08080c);
+    radial-gradient(
+        circle at 80% 15%,
+        rgba(112,64,255,.30),
+        transparent 30%
+    ),
+    linear-gradient(
+        145deg,
+        rgba(40,20,65,.8),
+        rgba(8,8,12,.9)
+    );
 }
 
 .project.two{
     background:
-    radial-gradient(circle at 30% 20%,#a855f7,transparent 25%),
-    linear-gradient(145deg,#16101d,#08080c);
+    radial-gradient(
+        circle at 20% 15%,
+        rgba(190,70,255,.23),
+        transparent 30%
+    ),
+    linear-gradient(
+        145deg,
+        rgba(55,20,65,.8),
+        rgba(8,8,12,.9)
+    );
 }
 
 .project.three{
     background:
-    radial-gradient(circle at 70% 30%,#4f46e5,transparent 25%),
-    linear-gradient(145deg,#0e1020,#08080c);
-}
-
-.project::before{
-    content:"";
-    position:absolute;
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,.15);
-    right:30px;
-    top:30px;
-    box-shadow:
-    0 0 0 25px rgba(255,255,255,.02),
-    0 0 0 50px rgba(255,255,255,.015);
+    radial-gradient(
+        circle at 75% 20%,
+        rgba(79,70,229,.25),
+        transparent 30%
+    ),
+    linear-gradient(
+        145deg,
+        rgba(18,25,60,.8),
+        rgba(8,8,12,.9)
+    );
 }
 
 .project-tag{
     color:#b99cff;
+
     font-size:11px;
+
     font-weight:800;
+
     letter-spacing:2px;
+
     position:relative;
 }
 
 .project h3{
     font-size:32px;
+
     margin:7px 0;
+
     position:relative;
 }
 
 .project p{
     color:#92929d;
+
     font-size:13px;
+
     position:relative;
 }
 
-/* PROCESS */
+
+/* =====================================================
+   PROCESS
+===================================================== */
 
 .process{
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
+
     gap:15px;
 }
 
 .process-card{
     padding:30px;
+
     border-radius:20px;
+
+    transition:.4s;
+}
+
+.process-card:hover{
+    transform:translateY(-8px);
+
+    border-color:
+        rgba(155,108,255,.3);
 }
 
 .process-card span{
     font-size:40px;
+
     font-weight:900;
+
     color:#9b6cff;
 }
 
@@ -528,30 +988,50 @@ section{
 
 .process-card p{
     color:#858590;
+
     font-size:13px;
+
+    line-height:1.7;
 }
 
-/* WHY */
+
+/* =====================================================
+   WHY NYXEBITE
+===================================================== */
 
 .why{
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:30px;
 }
 
 .why-box{
     padding:45px;
+
     border-radius:25px;
 }
 
 .why-list{
     display:grid;
+
     gap:15px;
 }
 
 .why-item{
     padding:23px;
+
     border-radius:18px;
+
+    transition:.35s;
+}
+
+.why-item:hover{
+    transform:translateX(7px);
+
+    border-color:
+        rgba(155,108,255,.3);
 }
 
 .why-item h3{
@@ -560,133 +1040,186 @@ section{
 
 .why-item p{
     color:#858590;
+
     font-size:13px;
+
+    line-height:1.6;
 }
 
-/* FOUNDER */
+
+/* =====================================================
+   FOUNDER
+===================================================== */
 
 .founder{
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:30px;
+
     align-items:stretch;
 }
 
 .founder-intro{
     padding:45px;
+
     border-radius:25px;
 }
 
 .founder-card{
     padding:45px;
-    border-radius:25px;
-    position:relative;
-    overflow:hidden;
-}
 
-.founder-card::before{
-    content:"";
-    position:absolute;
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    background:#6d35ff;
-    filter:blur(100px);
-    opacity:.2;
-    right:-80px;
-    top:-80px;
+    border-radius:25px;
+
+    position:relative;
 }
 
 .founder-avatar{
     width:85px;
+
     height:85px;
-    border-radius:50%;
+
+    border-radius:24px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     font-size:27px;
+
     font-weight:900;
-    background:linear-gradient(
+
+    background:
+    linear-gradient(
         135deg,
-        #a77cff,
-        #321277
+        rgba(167,124,255,.6),
+        rgba(50,18,119,.65)
     );
+
+    border:1px solid rgba(255,255,255,.15);
+
     box-shadow:
-    0 0 40px rgba(155,108,255,.4);
+        0 0 40px rgba(155,108,255,.3),
+        inset 0 1px rgba(255,255,255,.3);
+
     margin-bottom:25px;
+
     position:relative;
 }
 
 .founder-role{
     color:#9b6cff;
+
     font-size:11px;
+
     font-weight:800;
+
     letter-spacing:2px;
+
     position:relative;
 }
 
 .founder-name{
     font-size:36px;
+
     margin:7px 0 12px;
+
     position:relative;
 }
 
 .founder-card p{
     color:#858590;
+
     font-size:14px;
+
     line-height:1.8;
+
     position:relative;
 }
 
-/* CTA */
+
+/* =====================================================
+   CTA
+===================================================== */
 
 .cta{
     text-align:center;
+
     padding:100px 30px;
+
     border-radius:30px;
+
     position:relative;
+
     overflow:hidden;
 }
 
 .cta::before{
     content:"";
+
     position:absolute;
-    width:350px;
-    height:350px;
-    background:#713cff;
-    filter:blur(140px);
-    opacity:.25;
+
+    width:450px;
+
+    height:250px;
+
+    background:
+    radial-gradient(
+        ellipse,
+        rgba(113,60,255,.28),
+        transparent 65%
+    );
+
+    filter:blur(20px);
+
     left:50%;
+
     top:50%;
+
     transform:translate(-50%,-50%);
 }
 
 .cta-content{
     position:relative;
+
+    z-index:2;
 }
 
 .cta h2{
     font-size:clamp(45px,7vw,85px);
+
     line-height:1;
+
     letter-spacing:-5px;
+
     margin-bottom:25px;
 }
 
 .cta p{
     color:#92929d;
+
     margin-bottom:30px;
 }
 
-/* CONTACT */
+
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .contact{
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:25px;
 }
 
 .contact-card{
     padding:40px;
+
     border-radius:25px;
 }
 
@@ -696,64 +1229,167 @@ section{
 
 .contact-item small{
     display:block;
+
     color:#777783;
+
     font-size:11px;
+
     letter-spacing:2px;
+
     margin-bottom:7px;
 }
 
 .contact-item strong{
     font-size:18px;
+
+    word-break:break-word;
 }
 
 .contact-buttons{
     display:flex;
+
     gap:12px;
+
     flex-wrap:wrap;
+
     margin-top:30px;
 }
 
-/* FOOTER */
+
+/* =====================================================
+   FLOATING WHATSAPP
+===================================================== */
+
+.whatsapp{
+    position:fixed;
+
+    right:22px;
+
+    bottom:22px;
+
+    width:56px;
+
+    height:56px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.15),
+        rgba(255,255,255,.045)
+    );
+
+    border:1px solid rgba(255,255,255,.16);
+
+    backdrop-filter:blur(20px);
+
+    font-size:23px;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.2),
+        0 15px 50px rgba(0,0,0,.45);
+
+    z-index:998;
+
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:
+        translateY(-6px)
+        scale(1.05);
+
+    border-color:
+        rgba(167,124,255,.4);
+
+    box-shadow:
+        0 15px 55px rgba(124,58,237,.25);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
     padding:35px 0;
+
     border-top:1px solid rgba(255,255,255,.08);
+
     color:#666671;
+
     font-size:12px;
 }
 
 .footer{
     display:flex;
+
     justify-content:space-between;
 }
 
-/* REVEAL */
+
+/* =====================================================
+   REVEAL
+===================================================== */
 
 .reveal{
     opacity:0;
+
     transform:translateY(40px);
-    transition:1s ease;
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
 }
 
 .reveal.active{
     opacity:1;
+
     transform:translateY(0);
 }
 
-/* MOBILE */
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:850px){
+
+    nav{
+        top:12px;
+
+        width:94%;
+    }
 
     .navlinks{
         display:none;
     }
 
     section{
-        padding:85px 0;
+        padding:90px 0;
+    }
+
+    .hero{
+        padding-top:120px;
     }
 
     .hero h1{
         letter-spacing:-5px;
+    }
+
+    .hero-panel{
+        margin-top:55px;
+
+        padding:18px;
+
+        min-height:auto;
     }
 
     .services,
@@ -777,50 +1413,95 @@ footer{
 
     .stat{
         border-right:0;
-        border-bottom:1px solid rgba(255,255,255,.08);
+
+        border-bottom:
+            1px solid rgba(255,255,255,.08);
+    }
+
+    .stat:last-child{
+        border-bottom:0;
     }
 
 }
 
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
 @media(max-width:500px){
+
+    .container{
+        width:91%;
+    }
 
     .hero h1{
         font-size:57px;
+
+        letter-spacing:-4px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .title{
+        letter-spacing:-3px;
     }
 
     .process{
         grid-template-columns:1fr;
     }
 
-    .orb{
-        width:190px;
-        height:190px;
+    .service{
+        min-height:240px;
     }
 
-    .scene{
-        height:230px;
-    }
-
-    .footer{
-        flex-direction:column;
-        gap:10px;
+    .project{
+        min-height:300px;
     }
 
     .founder-name{
         font-size:30px;
     }
 
+    .cta{
+        padding:75px 20px;
+    }
+
+    .cta h2{
+        letter-spacing:-4px;
+    }
+
+    .footer{
+        flex-direction:column;
+
+        gap:10px;
+    }
+
+    .whatsapp{
+        right:16px;
+
+        bottom:16px;
+    }
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 <div class="grid-bg"></div>
 
+<div class="noise"></div>
 
-<!-- NAVBAR -->
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
 <nav>
 
@@ -832,13 +1513,21 @@ Nyxe<span>Bite</span>
 
 <div class="navlinks">
 
-<a href="#services">Services</a>
+<a href="#services">
+Services
+</a>
 
-<a href="#work">Work</a>
+<a href="#work">
+Work
+</a>
 
-<a href="#process">Process</a>
+<a href="#process">
+Process
+</a>
 
-<a href="#founder">Founder</a>
+<a href="#founder">
+Founder
+</a>
 
 <a href="#contact" class="navbutton">
 Start Project →
@@ -851,13 +1540,16 @@ Start Project →
 </nav>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
 <div class="container">
 
 <div class="hero-content reveal">
+
 
 <div class="hero-badge">
 
@@ -893,21 +1585,43 @@ stand out online.
 <div class="hero-buttons">
 
 <a href="#contact" class="btn primary">
+
 Start Your Project →
+
 </a>
+
 
 <a href="#work" class="btn secondary">
+
 Explore Our Work
+
 </a>
 
 </div>
 
 
-<div class="scene">
+<!-- GLASS HERO DISPLAY -->
 
-<div class="orb"></div>
+<div class="hero-panel glass">
+
+<div class="panel-item">
+WEB DESIGN
+</div>
+
+<div class="panel-item">
+BRANDING
+</div>
+
+<div class="panel-item">
+DEVELOPMENT
+</div>
+
+<div class="panel-item">
+MOBILE FIRST
+</div>
 
 </div>
+
 
 </div>
 
@@ -916,7 +1630,9 @@ Explore Our Work
 </section>
 
 
-<!-- STATS -->
+<!-- =====================================================
+     STATS
+===================================================== -->
 
 <section style="padding-top:20px;">
 
@@ -926,27 +1642,39 @@ Explore Our Work
 
 <div class="stat">
 
-<strong>01</strong>
+<strong>
+01
+</strong>
 
-<span>VISION</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>∞</strong>
-
-<span>CREATIVITY</span>
+<span>
+VISION
+</span>
 
 </div>
 
 
 <div class="stat">
 
-<strong>24/7</strong>
+<strong>
+∞
+</strong>
 
-<span>DIGITAL PRESENCE</span>
+<span>
+CREATIVITY
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>
+24/7
+</strong>
+
+<span>
+DIGITAL PRESENCE
+</span>
 
 </div>
 
@@ -957,7 +1685,9 @@ Explore Our Work
 </section>
 
 
-<!-- SERVICES -->
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
 <section id="services">
 
@@ -969,6 +1699,7 @@ Explore Our Work
 01 — SERVICES
 </div>
 
+
 <h2 class="title">
 
 Built for your<br>
@@ -978,6 +1709,7 @@ next move.
 </span>
 
 </h2>
+
 
 <p class="muted" style="margin-top:22px;">
 
@@ -994,11 +1726,17 @@ digital experiences designed around your goals.
 
 <div class="service glass">
 
-<div class="service-number">01</div>
+<div class="service-number">
+01
+</div>
 
-<div class="service-icon">◈</div>
+<div class="service-icon">
+◈
+</div>
 
-<h3>Business Websites</h3>
+<h3>
+Business Websites
+</h3>
 
 <p>
 Professional websites that help your business
@@ -1010,11 +1748,17 @@ build trust and reach more customers online.
 
 <div class="service glass">
 
-<div class="service-number">02</div>
+<div class="service-number">
+02
+</div>
 
-<div class="service-icon">✦</div>
+<div class="service-icon">
+✦
+</div>
 
-<h3>Brand Websites</h3>
+<h3>
+Brand Websites
+</h3>
 
 <p>
 Unique digital identities designed to make
@@ -1026,11 +1770,17 @@ your brand look memorable and premium.
 
 <div class="service glass">
 
-<div class="service-number">03</div>
+<div class="service-number">
+03
+</div>
 
-<div class="service-icon">◎</div>
+<div class="service-icon">
+◎
+</div>
 
-<h3>Landing Pages</h3>
+<h3>
+Landing Pages
+</h3>
 
 <p>
 Focused pages designed to showcase your
@@ -1042,11 +1792,17 @@ product, service or idea.
 
 <div class="service glass">
 
-<div class="service-number">04</div>
+<div class="service-number">
+04
+</div>
 
-<div class="service-icon">⌁</div>
+<div class="service-icon">
+⌁
+</div>
 
-<h3>Personal Websites</h3>
+<h3>
+Personal Websites
+</h3>
 
 <p>
 Build your personal presence with a modern
@@ -1058,11 +1814,17 @@ portfolio or creator website.
 
 <div class="service glass">
 
-<div class="service-number">05</div>
+<div class="service-number">
+05
+</div>
 
-<div class="service-icon">◇</div>
+<div class="service-icon">
+◇
+</div>
 
-<h3>Mobile First</h3>
+<h3>
+Mobile First
+</h3>
 
 <p>
 Beautiful experiences that work smoothly
@@ -1074,11 +1836,17 @@ across phones, tablets and computers.
 
 <div class="service glass">
 
-<div class="service-number">06</div>
+<div class="service-number">
+06
+</div>
 
-<div class="service-icon">⚡</div>
+<div class="service-icon">
+⚡
+</div>
 
-<h3>Modern UI</h3>
+<h3>
+Modern UI
+</h3>
 
 <p>
 Clean interfaces, animations and visual
@@ -1087,6 +1855,7 @@ details that give your website a premium feel.
 
 </div>
 
+
 </div>
 
 </div>
@@ -1094,7 +1863,9 @@ details that give your website a premium feel.
 </section>
 
 
-<!-- PORTFOLIO -->
+<!-- =====================================================
+     PORTFOLIO
+===================================================== -->
 
 <section id="work">
 
@@ -1105,6 +1876,7 @@ details that give your website a premium feel.
 <div class="label">
 02 — SELECTED WORK
 </div>
+
 
 <h2 class="title">
 
@@ -1180,7 +1952,9 @@ A clean digital home for creators and professionals.
 </section>
 
 
-<!-- PROCESS -->
+<!-- =====================================================
+     PROCESS
+===================================================== -->
 
 <section id="process">
 
@@ -1191,6 +1965,7 @@ A clean digital home for creators and professionals.
 <div class="label">
 03 — PROCESS
 </div>
+
 
 <h2 class="title">
 
@@ -1210,7 +1985,9 @@ Big results.
 
 <div class="process-card glass">
 
-<span>01</span>
+<span>
+01
+</span>
 
 <h3>
 Tell Us
@@ -1225,7 +2002,9 @@ Tell us about your business and what you want.
 
 <div class="process-card glass">
 
-<span>02</span>
+<span>
+02
+</span>
 
 <h3>
 Plan
@@ -1240,7 +2019,9 @@ We plan the structure, design and experience.
 
 <div class="process-card glass">
 
-<span>03</span>
+<span>
+03
+</span>
 
 <h3>
 Build
@@ -1255,7 +2036,9 @@ Your website is designed and developed.
 
 <div class="process-card glass">
 
-<span>04</span>
+<span>
+04
+</span>
 
 <h3>
 Launch
@@ -1275,7 +2058,9 @@ Your website goes live and is ready to share.
 </section>
 
 
-<!-- WHY NYXEBITE -->
+<!-- =====================================================
+     WHY NYXEBITE
+===================================================== -->
 
 <section>
 
@@ -1290,6 +2075,7 @@ Your website goes live and is ready to share.
 04 — WHY NYXEBITE
 </div>
 
+
 <h2 class="title">
 
 Not just a<br>
@@ -1299,6 +2085,7 @@ website.
 </span>
 
 </h2>
+
 
 <p class="muted" style="margin-top:25px;">
 
@@ -1374,7 +2161,9 @@ Start with a website and keep improving as you grow.
 </section>
 
 
-<!-- FOUNDER -->
+<!-- =====================================================
+     FOUNDER
+===================================================== -->
 
 <section id="founder">
 
@@ -1389,6 +2178,7 @@ Start with a website and keep improving as you grow.
 05 — THE FOUNDER
 </div>
 
+
 <h2 class="title">
 
 Meet the<br>
@@ -1398,6 +2188,7 @@ Founder.
 </span>
 
 </h2>
+
 
 <p class="muted" style="margin-top:25px;">
 
@@ -1446,7 +2237,9 @@ experiences.
 </section>
 
 
-<!-- CTA -->
+<!-- =====================================================
+     CTA
+===================================================== -->
 
 <section>
 
@@ -1460,6 +2253,7 @@ experiences.
 READY?
 </div>
 
+
 <h2>
 
 Let's build<br>
@@ -1470,12 +2264,16 @@ something epic.
 
 </h2>
 
+
 <p>
 Have an idea? Let's turn it into a digital experience.
 </p>
 
+
 <a href="#contact" class="btn primary">
+
 Start Your Project →
+
 </a>
 
 </div>
@@ -1487,7 +2285,9 @@ Start Your Project →
 </section>
 
 
-<!-- CONTACT -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section id="contact">
 
@@ -1502,6 +2302,7 @@ Start Your Project →
 06 — CONTACT
 </div>
 
+
 <h2 class="title">
 
 Your idea.<br>
@@ -1511,6 +2312,7 @@ Our build.
 </span>
 
 </h2>
+
 
 <p class="muted" style="margin-top:25px;max-width:500px;">
 
@@ -1587,7 +2389,9 @@ Email Us
 </section>
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -1610,95 +2414,202 @@ FOUNDED BY SHRESTH SINGH
 </footer>
 
 
+<!-- FLOATING WHATSAPP -->
+
+<a
+href="https://wa.me/918189027132"
+target="_blank"
+rel="noopener noreferrer"
+class="whatsapp"
+aria-label="Chat on WhatsApp"
+>
+✆
+</a>
+
+
 <script>
 
-/* SCROLL REVEAL */
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
 
 const reveals =
 document.querySelectorAll(".reveal");
 
 const observer =
 new IntersectionObserver(
+
 (entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add("active");
-        }
-    });
-},
-{
-    threshold:.12
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("active");
+
+}
+
 });
+
+},
+
+{
+threshold:.12
+}
+
+);
 
 reveals.forEach(el=>{
-    observer.observe(el);
-});
 
-
-/* 3D ORB MOUSE EFFECT */
-
-const orb =
-document.querySelector(".orb");
-
-document.addEventListener("mousemove",(e)=>{
-
-    if(window.innerWidth < 700) return;
-
-    const x =
-    (e.clientX / window.innerWidth - .5) * 25;
-
-    const y =
-    (e.clientY / window.innerHeight - .5) * 25;
-
-    orb.style.transform =
-    `rotateX(${-y}deg) rotateY(${x}deg)`;
+observer.observe(el);
 
 });
 
 
-/* 3D SERVICE CARDS */
+/* =====================================================
+   GLASS CARD TILT
+===================================================== */
 
 const cards =
-document.querySelectorAll(".service");
+document.querySelectorAll(
+".service, .process-card, .why-item"
+);
 
 cards.forEach(card=>{
 
-    card.addEventListener("mousemove",(e)=>{
+card.addEventListener(
+"mousemove",
+(e)=>{
 
-        const rect =
-        card.getBoundingClientRect();
+if(window.innerWidth < 800)
+return;
 
-        const x =
-        e.clientX - rect.left;
+const rect =
+card.getBoundingClientRect();
 
-        const y =
-        e.clientY - rect.top;
+const x =
+e.clientX - rect.left;
 
-        const rotateY =
-        (x / rect.width - .5) * 10;
+const y =
+e.clientY - rect.top;
 
-        const rotateX =
-        (y / rect.height - .5) * -10;
+const rotateY =
+(x / rect.width - .5) * 5;
 
-        card.style.transform =
-        `perspective(800px)
-         rotateX(${rotateX}deg)
-         rotateY(${rotateY}deg)
-         translateY(-8px)`;
+const rotateX =
+(y / rect.height - .5) * -5;
 
-    });
+card.style.transform =
+`
+perspective(900px)
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+translateY(-8px)
+`;
+
+});
 
 
-    card.addEventListener("mouseleave",()=>{
+card.addEventListener(
+"mouseleave",
+()=>{
 
-        card.style.transform =
-        "perspective(800px) rotateX(0) rotateY(0) translateY(0)";
+card.style.transform="";
 
-    });
+});
+
+});
+
+
+/* =====================================================
+   PORTFOLIO TILT
+===================================================== */
+
+const projects =
+document.querySelectorAll(".project");
+
+projects.forEach(project=>{
+
+project.addEventListener(
+"mousemove",
+(e)=>{
+
+if(window.innerWidth < 800)
+return;
+
+const rect =
+project.getBoundingClientRect();
+
+const x =
+e.clientX - rect.left;
+
+const y =
+e.clientY - rect.top;
+
+const rotateY =
+(x / rect.width - .5) * 4;
+
+const rotateX =
+(y / rect.height - .5) * -4;
+
+project.style.transform =
+`
+perspective(1000px)
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+translateY(-8px)
+`;
+
+});
+
+
+project.addEventListener(
+"mouseleave",
+()=>{
+
+project.style.transform="";
+
+});
+
+});
+
+
+/* =====================================================
+   HERO GLASS ITEMS
+===================================================== */
+
+const panelItems =
+document.querySelectorAll(".panel-item");
+
+panelItems.forEach(item=>{
+
+item.addEventListener(
+"mouseenter",
+()=>{
+
+panelItems.forEach(other=>{
+other.style.opacity=".45";
+});
+
+item.style.opacity="1";
+
+});
+
+
+item.addEventListener(
+"mouseleave",
+()=>{
+
+panelItems.forEach(other=>{
+other.style.opacity="1";
+});
+
+});
 
 });
 
 </script>
+
 
 </body>
 </html>
