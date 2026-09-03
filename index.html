@@ -3,9 +3,7 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="google-site-verification" content="7HFzrx83x2RldO5hvzqBRBOtJfEd8BK754MJzmzTPS8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>NyxeBite — We Build Digital Experiences</title>
@@ -14,14 +12,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
     margin:0;
@@ -46,156 +39,94 @@ a{
 }
 
 
-/* =====================================================
-   AMBIENT BACKGROUND
-===================================================== */
+/* BACKGROUND */
 
 body::before{
     content:"";
     position:fixed;
-
     width:650px;
     height:650px;
-
     top:-300px;
     left:-250px;
-
     background:#7c3aed;
-
     filter:blur(180px);
-
-    opacity:.16;
-
+    opacity:.18;
     pointer-events:none;
-
     z-index:-5;
 }
 
 body::after{
     content:"";
     position:fixed;
-
     width:600px;
     height:600px;
-
     right:-300px;
     bottom:-300px;
-
     background:#4f46e5;
-
     filter:blur(190px);
-
-    opacity:.13;
-
+    opacity:.15;
     pointer-events:none;
-
     z-index:-5;
 }
 
-
-/* GRID */
-
 .grid-bg{
     position:fixed;
-
     inset:0;
-
     z-index:-6;
-
-    opacity:.08;
-
+    opacity:.07;
     background-image:
-    linear-gradient(
-        rgba(255,255,255,.08) 1px,
-        transparent 1px
-    ),
-    linear-gradient(
-        90deg,
-        rgba(255,255,255,.08) 1px,
-        transparent 1px
-    );
-
+        linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
     background-size:65px 65px;
-
-    mask-image:
-    linear-gradient(
-        to bottom,
-        black,
-        transparent 85%
-    );
+    mask-image:linear-gradient(to bottom,black,transparent 85%);
 }
-
-
-/* NOISE */
 
 .noise{
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
     z-index:1000;
-
     opacity:.025;
-
     background-image:url(
         "data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E"
     );
 }
 
 
-/* =====================================================
-   NAVBAR
-===================================================== */
+/* NAV */
 
 nav{
     position:fixed;
-
     top:18px;
     left:50%;
-
     transform:translateX(-50%);
-
     width:92%;
     max-width:1100px;
-
     z-index:999;
-
     padding:14px 18px;
-
     border-radius:22px;
-
     border:1px solid rgba(255,255,255,.14);
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
-        rgba(255,255,255,.105),
+        rgba(255,255,255,.11),
         rgba(255,255,255,.025)
     );
-
     backdrop-filter:blur(28px);
     -webkit-backdrop-filter:blur(28px);
-
     box-shadow:
         inset 0 1px rgba(255,255,255,.18),
-        0 25px 80px rgba(0,0,0,.4);
+        0 25px 80px rgba(0,0,0,.45);
 }
 
 .nav{
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
 }
 
 .logo{
     font-size:22px;
-
     font-weight:900;
-
     letter-spacing:-1px;
 }
 
@@ -205,54 +136,34 @@ nav{
 
 .navlinks{
     display:flex;
-
     gap:25px;
-
     align-items:center;
 }
 
 .navlinks a{
     font-size:13px;
-
     color:#aaa;
-
     transition:.3s;
 }
 
 .navlinks a:hover{
-    color:white;
+    color:#fff;
 }
 
 .navbutton{
     padding:10px 17px;
-
     border-radius:12px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #fff,
-        #ded6ff
-    );
-
+    background:linear-gradient(135deg,#fff,#ded6ff);
     color:#08080a!important;
-
     font-weight:800;
-
-    box-shadow:
-        0 0 30px rgba(167,124,255,.15);
 }
 
 
-/* =====================================================
-   GENERAL
-===================================================== */
+/* GENERAL */
 
 .container{
     width:90%;
-
     max-width:1150px;
-
     margin:auto;
 }
 
@@ -262,21 +173,15 @@ section{
 
 .label{
     color:#a678ff;
-
     font-size:12px;
-
     font-weight:800;
-
     letter-spacing:3px;
-
     margin-bottom:18px;
 }
 
 .title{
     font-size:clamp(42px,6vw,75px);
-
     line-height:.98;
-
     letter-spacing:-4px;
 }
 
@@ -284,98 +189,62 @@ section{
     color:#90909a;
 }
 
-
-/* =====================================================
-   GRADIENT TEXT
-===================================================== */
-
 .gradient{
-    background:
-    linear-gradient(
+    background:linear-gradient(
         100deg,
         #fff,
         #c7aaff,
         #8755ff,
         #fff
     );
-
     background-size:250%;
-
     -webkit-background-clip:text;
     background-clip:text;
-
     color:transparent;
-
     animation:gradientMove 6s linear infinite;
 }
 
 @keyframes gradientMove{
-
-    0%{
-        background-position:0%;
-    }
-
-    100%{
-        background-position:250%;
-    }
-
+    0%{background-position:0%}
+    100%{background-position:250%}
 }
 
 
-/* =====================================================
-   UNIVERSAL GLASS
-===================================================== */
+/* GLASS */
 
 .glass{
     position:relative;
-
     overflow:hidden;
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
-        rgba(255,255,255,.105),
+        rgba(255,255,255,.11),
         rgba(255,255,255,.035) 45%,
         rgba(255,255,255,.018)
     );
-
-    border:1px solid rgba(255,255,255,.12);
-
+    border:1px solid rgba(255,255,255,.13);
     backdrop-filter:blur(25px);
     -webkit-backdrop-filter:blur(25px);
-
     box-shadow:
-        inset 0 1px rgba(255,255,255,.16),
+        inset 0 1px rgba(255,255,255,.18),
         inset 0 -1px rgba(255,255,255,.025),
         0 25px 80px rgba(0,0,0,.3);
 }
 
-
-/* GLASS SHINE */
-
 .glass::before{
     content:"";
-
     position:absolute;
-
     width:220px;
     height:140%;
-
     top:-20%;
     left:-300px;
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         90deg,
         transparent,
-        rgba(255,255,255,.15),
+        rgba(255,255,255,.17),
         transparent
     );
-
     transform:skewX(-18deg);
-
     transition:1s;
-
     pointer-events:none;
 }
 
@@ -383,186 +252,108 @@ section{
     left:130%;
 }
 
-
-/* TOP LIGHT */
-
 .glass::after{
     content:"";
-
     position:absolute;
-
     top:0;
-
     left:8%;
-
     width:84%;
-
     height:1px;
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         90deg,
         transparent,
         rgba(255,255,255,.45),
         transparent
     );
-
-    opacity:.65;
 }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+/* HERO */
 
 .hero{
     min-height:100vh;
-
     display:flex;
-
     align-items:center;
-
     padding-top:120px;
-
     position:relative;
 }
 
 .hero-content{
     text-align:center;
-
     width:100%;
 }
 
 .hero-badge{
     display:inline-flex;
-
     align-items:center;
-
     gap:8px;
-
     padding:9px 15px;
-
     border:1px solid rgba(155,108,255,.35);
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         rgba(155,108,255,.14),
         rgba(255,255,255,.035)
     );
-
     backdrop-filter:blur(20px);
-
     border-radius:100px;
-
     color:#c8b5ff;
-
     font-size:11px;
-
     font-weight:700;
-
     letter-spacing:1.5px;
-
     margin-bottom:30px;
-
-    box-shadow:
-        inset 0 1px rgba(255,255,255,.15),
-        0 0 35px rgba(124,58,237,.1);
 }
 
 .dot{
     width:7px;
-
     height:7px;
-
     border-radius:50%;
-
     background:#a678ff;
-
-    box-shadow:
-        0 0 10px #a678ff,
-        0 0 25px #7c3aed;
-
+    box-shadow:0 0 10px #a678ff;
     animation:pulse 2s infinite;
 }
 
 @keyframes pulse{
-
-    0%,100%{
-        opacity:1;
-    }
-
-    50%{
-        opacity:.35;
-    }
-
+    0%,100%{opacity:1}
+    50%{opacity:.35}
 }
 
 .hero h1{
     font-size:clamp(58px,10vw,125px);
-
     line-height:.87;
-
     letter-spacing:-8px;
-
     max-width:1000px;
-
     margin:auto;
 }
 
 .hero p{
     max-width:650px;
-
     margin:35px auto;
-
     color:#9999a4;
-
     font-size:17px;
-
     line-height:1.8;
 }
 
 .hero-buttons{
     display:flex;
-
     justify-content:center;
-
     gap:14px;
-
     flex-wrap:wrap;
 }
 
-
-/* BUTTONS */
-
 .btn{
     padding:15px 23px;
-
     border-radius:14px;
-
     font-size:14px;
-
     font-weight:800;
-
     transition:.35s;
-
     display:inline-flex;
-
     align-items:center;
-
     gap:8px;
 }
 
 .primary{
-    background:
-    linear-gradient(
-        135deg,
-        #fff,
-        #ded6ff
-    );
-
+    background:linear-gradient(135deg,#fff,#ded6ff);
     color:#050507;
-
     box-shadow:
         0 0 40px rgba(255,255,255,.12),
         inset 0 1px rgba(255,255,255,.8);
@@ -570,138 +361,70 @@ section{
 
 .primary:hover{
     transform:translateY(-5px) scale(1.02);
-
-    box-shadow:
-        0 18px 60px rgba(167,124,255,.25);
+    box-shadow:0 18px 60px rgba(167,124,255,.25);
 }
 
 .secondary{
     border:1px solid rgba(255,255,255,.13);
-
-    background:
-        rgba(255,255,255,.045);
-
+    background:rgba(255,255,255,.045);
     backdrop-filter:blur(18px);
 }
 
 .secondary:hover{
-    background:
-        rgba(255,255,255,.09);
-
+    background:rgba(255,255,255,.09);
     transform:translateY(-5px);
-
-    border-color:rgba(255,255,255,.25);
 }
 
 
-/* =====================================================
-   HERO GLASS PANEL
-===================================================== */
+/* HERO PANEL */
 
 .hero-panel{
     max-width:900px;
-
     margin:75px auto 0;
-
     min-height:150px;
-
     border-radius:28px;
-
     padding:25px;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     gap:14px;
-
     flex-wrap:wrap;
-}
-
-.hero-panel::before{
-    content:"";
-
-    position:absolute;
-
-    width:500px;
-
-    height:120px;
-
-    left:50%;
-
-    top:50%;
-
-    transform:translate(-50%,-50%);
-
-    background:#8b5cf6;
-
-    filter:blur(100px);
-
-    opacity:.14;
 }
 
 .panel-item{
     position:relative;
-
     padding:17px 22px;
-
     border-radius:16px;
-
     border:1px solid rgba(255,255,255,.1);
-
-    background:
-        rgba(255,255,255,.045);
-
+    background:rgba(255,255,255,.045);
     color:#9999a5;
-
     font-size:11px;
-
     font-weight:800;
-
     letter-spacing:1.5px;
-
-    box-shadow:
-        inset 0 1px rgba(255,255,255,.1);
-
     transition:.35s;
 }
 
 .panel-item:hover{
     color:white;
-
-    background:
-        rgba(167,124,255,.13);
-
-    border-color:
-        rgba(167,124,255,.35);
-
+    background:rgba(167,124,255,.13);
+    border-color:rgba(167,124,255,.35);
     transform:translateY(-4px);
 }
 
 
-/* =====================================================
-   STATS
-===================================================== */
+/* STATS */
 
 .stats{
     margin-top:50px;
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     border-top:1px solid rgba(255,255,255,.08);
-
     border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .stat{
     padding:30px;
-
     text-align:center;
-
     border-right:1px solid rgba(255,255,255,.08);
 }
 
@@ -711,64 +434,43 @@ section{
 
 .stat strong{
     display:block;
-
     font-size:30px;
-
     margin-bottom:5px;
 }
 
 .stat span{
     color:#777782;
-
     font-size:12px;
-
     letter-spacing:1px;
 }
 
 
-/* =====================================================
-   SECTION HEAD
-===================================================== */
+/* SECTION */
 
 .section-head{
     max-width:700px;
-
     margin-bottom:55px;
 }
 
 
-/* =====================================================
-   SERVICES
-===================================================== */
+/* SERVICES */
 
 .services{
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:20px;
 }
 
 .service{
     padding:32px;
-
     min-height:260px;
-
     border-radius:24px;
-
     transition:.45s;
-
-    transform-style:preserve-3d;
 }
 
 .service:hover{
-    transform:
-        translateY(-10px)
-        scale(1.015);
-
-    border-color:
-        rgba(155,108,255,.4);
-
+    transform:translateY(-10px) scale(1.015);
+    border-color:rgba(155,108,255,.4);
     box-shadow:
         inset 0 1px rgba(255,255,255,.18),
         0 30px 90px rgba(76,29,149,.2);
@@ -776,209 +478,137 @@ section{
 
 .service-number{
     font-size:12px;
-
     color:#9b6cff;
-
     font-weight:800;
 }
 
 .service-icon{
-    width:54px;
-
-    height:54px;
-
+    width:58px;
+    height:58px;
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    font-size:25px;
-
+    font-size:27px;
     margin:30px 0 20px;
-
-    border-radius:17px;
-
-    color:#d0bdff;
-
-    background:
-    linear-gradient(
+    border-radius:18px;
+    color:#e0d3ff;
+    background:linear-gradient(
         135deg,
-        rgba(167,124,255,.18),
+        rgba(167,124,255,.2),
         rgba(255,255,255,.04)
     );
-
     border:1px solid rgba(255,255,255,.11);
-
     box-shadow:
         inset 0 1px rgba(255,255,255,.17),
-        0 10px 30px rgba(76,29,149,.1);
+        0 10px 30px rgba(76,29,149,.12);
+    transition:.35s;
+}
+
+.service:hover .service-icon{
+    transform:scale(1.08) rotate(-3deg);
+    box-shadow:
+        0 0 30px rgba(155,108,255,.2),
+        inset 0 1px rgba(255,255,255,.25);
 }
 
 .service h3{
     font-size:21px;
-
     margin-bottom:10px;
 }
 
 .service p{
     color:#858590;
-
     font-size:13px;
-
     line-height:1.7;
 }
 
 
-/* =====================================================
-   PORTFOLIO
-===================================================== */
+/* PORTFOLIO */
 
 .portfolio{
     display:grid;
-
     grid-template-columns:1.4fr 1fr;
-
     gap:20px;
 }
 
 .project{
     min-height:350px;
-
     border-radius:25px;
-
     padding:30px;
-
     position:relative;
-
     overflow:hidden;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:flex-end;
-
     transition:.45s;
 }
 
 .project:hover{
     transform:translateY(-9px);
-
-    border-color:
-        rgba(155,108,255,.38);
-
+    border-color:rgba(155,108,255,.38);
     box-shadow:
         inset 0 1px rgba(255,255,255,.2),
         0 30px 90px rgba(76,29,149,.2);
 }
 
-
-/* NO CIRCLES */
-
 .project.one{
     background:
-    radial-gradient(
-        circle at 80% 15%,
-        rgba(112,64,255,.30),
-        transparent 30%
-    ),
-    linear-gradient(
-        145deg,
-        rgba(40,20,65,.8),
-        rgba(8,8,12,.9)
-    );
+    radial-gradient(circle at 80% 15%,rgba(112,64,255,.30),transparent 30%),
+    linear-gradient(145deg,rgba(40,20,65,.8),rgba(8,8,12,.9));
 }
 
 .project.two{
     background:
-    radial-gradient(
-        circle at 20% 15%,
-        rgba(190,70,255,.23),
-        transparent 30%
-    ),
-    linear-gradient(
-        145deg,
-        rgba(55,20,65,.8),
-        rgba(8,8,12,.9)
-    );
+    radial-gradient(circle at 20% 15%,rgba(190,70,255,.23),transparent 30%),
+    linear-gradient(145deg,rgba(55,20,65,.8),rgba(8,8,12,.9));
 }
 
 .project.three{
     background:
-    radial-gradient(
-        circle at 75% 20%,
-        rgba(79,70,229,.25),
-        transparent 30%
-    ),
-    linear-gradient(
-        145deg,
-        rgba(18,25,60,.8),
-        rgba(8,8,12,.9)
-    );
+    radial-gradient(circle at 75% 20%,rgba(79,70,229,.25),transparent 30%),
+    linear-gradient(145deg,rgba(18,25,60,.8),rgba(8,8,12,.9));
 }
 
 .project-tag{
     color:#b99cff;
-
     font-size:11px;
-
     font-weight:800;
-
     letter-spacing:2px;
-
-    position:relative;
 }
 
 .project h3{
     font-size:32px;
-
     margin:7px 0;
-
-    position:relative;
 }
 
 .project p{
     color:#92929d;
-
     font-size:13px;
-
-    position:relative;
 }
 
 
-/* =====================================================
-   PROCESS
-===================================================== */
+/* PROCESS */
 
 .process{
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:15px;
 }
 
 .process-card{
     padding:30px;
-
     border-radius:20px;
-
     transition:.4s;
 }
 
 .process-card:hover{
     transform:translateY(-8px);
-
-    border-color:
-        rgba(155,108,255,.3);
+    border-color:rgba(155,108,255,.3);
 }
 
 .process-card span{
     font-size:40px;
-
     font-weight:900;
-
     color:#9b6cff;
 }
 
@@ -988,50 +618,38 @@ section{
 
 .process-card p{
     color:#858590;
-
     font-size:13px;
-
     line-height:1.7;
 }
 
 
-/* =====================================================
-   WHY NYXEBITE
-===================================================== */
+/* WHY */
 
 .why{
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:30px;
 }
 
 .why-box{
     padding:45px;
-
     border-radius:25px;
 }
 
 .why-list{
     display:grid;
-
     gap:15px;
 }
 
 .why-item{
     padding:23px;
-
     border-radius:18px;
-
     transition:.35s;
 }
 
 .why-item:hover{
     transform:translateX(7px);
-
-    border-color:
-        rgba(155,108,255,.3);
+    border-color:rgba(155,108,255,.3);
 }
 
 .why-item h3{
@@ -1040,186 +658,123 @@ section{
 
 .why-item p{
     color:#858590;
-
     font-size:13px;
-
     line-height:1.6;
 }
 
 
-/* =====================================================
-   FOUNDER
-===================================================== */
+/* FOUNDER */
 
 .founder{
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:30px;
-
-    align-items:stretch;
 }
 
 .founder-intro{
     padding:45px;
-
     border-radius:25px;
 }
 
 .founder-card{
     padding:45px;
-
     border-radius:25px;
-
-    position:relative;
 }
 
 .founder-avatar{
     width:85px;
-
     height:85px;
-
     border-radius:24px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     font-size:27px;
-
     font-weight:900;
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         rgba(167,124,255,.6),
         rgba(50,18,119,.65)
     );
-
     border:1px solid rgba(255,255,255,.15);
-
     box-shadow:
         0 0 40px rgba(155,108,255,.3),
         inset 0 1px rgba(255,255,255,.3);
-
     margin-bottom:25px;
-
-    position:relative;
 }
 
 .founder-role{
     color:#9b6cff;
-
     font-size:11px;
-
     font-weight:800;
-
     letter-spacing:2px;
-
-    position:relative;
 }
 
 .founder-name{
     font-size:36px;
-
     margin:7px 0 12px;
-
-    position:relative;
 }
 
 .founder-card p{
     color:#858590;
-
     font-size:14px;
-
     line-height:1.8;
-
-    position:relative;
 }
 
 
-/* =====================================================
-   CTA
-===================================================== */
+/* CTA */
 
 .cta{
     text-align:center;
-
     padding:100px 30px;
-
     border-radius:30px;
-
     position:relative;
-
     overflow:hidden;
 }
 
 .cta::before{
     content:"";
-
     position:absolute;
-
     width:450px;
-
     height:250px;
-
-    background:
-    radial-gradient(
+    background:radial-gradient(
         ellipse,
         rgba(113,60,255,.28),
         transparent 65%
     );
-
     filter:blur(20px);
-
     left:50%;
-
     top:50%;
-
     transform:translate(-50%,-50%);
 }
 
 .cta-content{
     position:relative;
-
     z-index:2;
 }
 
 .cta h2{
     font-size:clamp(45px,7vw,85px);
-
     line-height:1;
-
     letter-spacing:-5px;
-
     margin-bottom:25px;
 }
 
 .cta p{
     color:#92929d;
-
     margin-bottom:30px;
 }
 
 
-/* =====================================================
-   CONTACT
-===================================================== */
+/* CONTACT */
 
 .contact{
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:25px;
 }
 
 .contact-card{
     padding:40px;
-
     border-radius:25px;
 }
 
@@ -1229,121 +784,78 @@ section{
 
 .contact-item small{
     display:block;
-
     color:#777783;
-
     font-size:11px;
-
     letter-spacing:2px;
-
     margin-bottom:7px;
 }
 
 .contact-item strong{
     font-size:18px;
-
     word-break:break-word;
 }
 
 .contact-buttons{
     display:flex;
-
     gap:12px;
-
     flex-wrap:wrap;
-
     margin-top:30px;
 }
 
 
-/* =====================================================
-   FLOATING WHATSAPP
-===================================================== */
+/* WHATSAPP */
 
 .whatsapp{
     position:fixed;
-
     right:22px;
-
     bottom:22px;
-
-    width:56px;
-
-    height:56px;
-
+    width:58px;
+    height:58px;
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     border-radius:18px;
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         rgba(255,255,255,.15),
         rgba(255,255,255,.045)
     );
-
     border:1px solid rgba(255,255,255,.16);
-
     backdrop-filter:blur(20px);
-
-    font-size:23px;
-
+    font-size:25px;
     box-shadow:
         inset 0 1px rgba(255,255,255,.2),
         0 15px 50px rgba(0,0,0,.45);
-
     z-index:998;
-
     transition:.3s;
 }
 
 .whatsapp:hover{
-    transform:
-        translateY(-6px)
-        scale(1.05);
-
-    border-color:
-        rgba(167,124,255,.4);
-
-    box-shadow:
-        0 15px 55px rgba(124,58,237,.25);
+    transform:translateY(-6px) scale(1.05);
+    border-color:rgba(167,124,255,.4);
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 
 footer{
     padding:35px 0;
-
     border-top:1px solid rgba(255,255,255,.08);
-
     color:#666671;
-
     font-size:12px;
 }
 
 .footer{
     display:flex;
-
     justify-content:space-between;
 }
 
 
-/* =====================================================
-   REVEAL
-===================================================== */
+/* REVEAL */
 
 .reveal{
     opacity:0;
-
     transform:translateY(40px);
-
     transition:
         opacity 1s ease,
         transform 1s ease;
@@ -1351,20 +863,16 @@ footer{
 
 .reveal.active{
     opacity:1;
-
     transform:translateY(0);
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media(max-width:850px){
 
     nav{
         top:12px;
-
         width:94%;
     }
 
@@ -1386,10 +894,7 @@ footer{
 
     .hero-panel{
         margin-top:55px;
-
         padding:18px;
-
-        min-height:auto;
     }
 
     .services,
@@ -1413,21 +918,14 @@ footer{
 
     .stat{
         border-right:0;
-
-        border-bottom:
-            1px solid rgba(255,255,255,.08);
+        border-bottom:1px solid rgba(255,255,255,.08);
     }
 
     .stat:last-child{
         border-bottom:0;
     }
-
 }
 
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
 
 @media(max-width:500px){
 
@@ -1437,7 +935,6 @@ footer{
 
     .hero h1{
         font-size:57px;
-
         letter-spacing:-4px;
     }
 
@@ -1475,33 +972,26 @@ footer{
 
     .footer{
         flex-direction:column;
-
         gap:10px;
     }
 
     .whatsapp{
         right:16px;
-
         bottom:16px;
     }
-
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 <div class="grid-bg"></div>
-
 <div class="noise"></div>
 
 
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
+<!-- NAVBAR -->
 
 <nav>
 
@@ -1513,24 +1003,16 @@ Nyxe<span>Bite</span>
 
 <div class="navlinks">
 
-<a href="#services">
-Services
-</a>
+<a href="#services">Services</a>
 
-<a href="#work">
-Work
-</a>
+<a href="#work">Work</a>
 
-<a href="#process">
-Process
-</a>
+<a href="#process">Process</a>
 
-<a href="#founder">
-Founder
-</a>
+<a href="#founder">Founder</a>
 
 <a href="#contact" class="navbutton">
-Start Project →
+🚀 Start Project →
 </a>
 
 </div>
@@ -1540,9 +1022,7 @@ Start Project →
 </nav>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1550,12 +1030,11 @@ Start Project →
 
 <div class="hero-content reveal">
 
-
 <div class="hero-badge">
 
 <span class="dot"></span>
 
-DIGITAL CREATIVE STUDIO
+🚀 DIGITAL CREATIVE STUDIO
 
 </div>
 
@@ -1567,7 +1046,7 @@ We Build
 <br>
 
 <span class="gradient">
-Digital Experiences.
+Digital Experiences. ✨
 </span>
 
 </h1>
@@ -1585,43 +1064,35 @@ stand out online.
 <div class="hero-buttons">
 
 <a href="#contact" class="btn primary">
-
-Start Your Project →
-
+🚀 Start Your Project →
 </a>
 
-
 <a href="#work" class="btn secondary">
-
-Explore Our Work
-
+👀 Explore Our Work
 </a>
 
 </div>
 
-
-<!-- GLASS HERO DISPLAY -->
 
 <div class="hero-panel glass">
 
 <div class="panel-item">
-WEB DESIGN
+🎨 WEB DESIGN
 </div>
 
 <div class="panel-item">
-BRANDING
+✨ BRANDING
 </div>
 
 <div class="panel-item">
-DEVELOPMENT
+⚡ DEVELOPMENT
 </div>
 
 <div class="panel-item">
-MOBILE FIRST
+📱 MOBILE FIRST
 </div>
 
 </div>
-
 
 </div>
 
@@ -1630,9 +1101,7 @@ MOBILE FIRST
 </section>
 
 
-<!-- =====================================================
-     STATS
-===================================================== -->
+<!-- STATS -->
 
 <section style="padding-top:20px;">
 
@@ -1642,39 +1111,25 @@ MOBILE FIRST
 
 <div class="stat">
 
-<strong>
-01
-</strong>
+<strong>01</strong>
 
-<span>
-VISION
-</span>
+<span>💡 VISION</span>
 
 </div>
 
-
 <div class="stat">
 
-<strong>
-∞
-</strong>
+<strong>∞</strong>
 
-<span>
-CREATIVITY
-</span>
+<span>✨ CREATIVITY</span>
 
 </div>
 
-
 <div class="stat">
 
-<strong>
-24/7
-</strong>
+<strong>24/7</strong>
 
-<span>
-DIGITAL PRESENCE
-</span>
+<span>🌐 DIGITAL PRESENCE</span>
 
 </div>
 
@@ -1685,9 +1140,7 @@ DIGITAL PRESENCE
 </section>
 
 
-<!-- =====================================================
-     SERVICES
-===================================================== -->
+<!-- SERVICES -->
 
 <section id="services">
 
@@ -1699,17 +1152,15 @@ DIGITAL PRESENCE
 01 — SERVICES
 </div>
 
-
 <h2 class="title">
 
 Built for your<br>
 
 <span class="gradient">
-next move.
+next move. 🚀
 </span>
 
 </h2>
-
 
 <p class="muted" style="margin-top:22px;">
 
@@ -1726,13 +1177,9 @@ digital experiences designed around your goals.
 
 <div class="service glass">
 
-<div class="service-number">
-01
-</div>
+<div class="service-number">01</div>
 
-<div class="service-icon">
-◈
-</div>
+<div class="service-icon">🏢</div>
 
 <h3>
 Business Websites
@@ -1748,13 +1195,9 @@ build trust and reach more customers online.
 
 <div class="service glass">
 
-<div class="service-number">
-02
-</div>
+<div class="service-number">02</div>
 
-<div class="service-icon">
-✦
-</div>
+<div class="service-icon">✨</div>
 
 <h3>
 Brand Websites
@@ -1770,13 +1213,9 @@ your brand look memorable and premium.
 
 <div class="service glass">
 
-<div class="service-number">
-03
-</div>
+<div class="service-number">03</div>
 
-<div class="service-icon">
-◎
-</div>
+<div class="service-icon">🎯</div>
 
 <h3>
 Landing Pages
@@ -1792,13 +1231,9 @@ product, service or idea.
 
 <div class="service glass">
 
-<div class="service-number">
-04
-</div>
+<div class="service-number">04</div>
 
-<div class="service-icon">
-⌁
-</div>
+<div class="service-icon">👤</div>
 
 <h3>
 Personal Websites
@@ -1814,13 +1249,9 @@ portfolio or creator website.
 
 <div class="service glass">
 
-<div class="service-number">
-05
-</div>
+<div class="service-number">05</div>
 
-<div class="service-icon">
-◇
-</div>
+<div class="service-icon">📱</div>
 
 <h3>
 Mobile First
@@ -1836,13 +1267,9 @@ across phones, tablets and computers.
 
 <div class="service glass">
 
-<div class="service-number">
-06
-</div>
+<div class="service-number">06</div>
 
-<div class="service-icon">
-⚡
-</div>
+<div class="service-icon">⚡</div>
 
 <h3>
 Modern UI
@@ -1863,9 +1290,7 @@ details that give your website a premium feel.
 </section>
 
 
-<!-- =====================================================
-     PORTFOLIO
-===================================================== -->
+<!-- PORTFOLIO -->
 
 <section id="work">
 
@@ -1877,13 +1302,12 @@ details that give your website a premium feel.
 02 — SELECTED WORK
 </div>
 
-
 <h2 class="title">
 
 Ideas turned<br>
 
 <span class="gradient">
-into reality.
+into reality. 🔥
 </span>
 
 </h2>
@@ -1897,7 +1321,7 @@ into reality.
 <div class="project one glass">
 
 <div class="project-tag">
-DIGITAL STUDIO
+💻 DIGITAL STUDIO
 </div>
 
 <h3>
@@ -1914,7 +1338,7 @@ Futuristic digital creative studio experience.
 <div class="project two glass">
 
 <div class="project-tag">
-SALON / LOCAL BUSINESS
+💄 SALON / LOCAL BUSINESS
 </div>
 
 <h3>
@@ -1931,7 +1355,7 @@ Modern website concept for a beauty business.
 <div class="project three glass">
 
 <div class="project-tag">
-PERSONAL BRAND
+👤 PERSONAL BRAND
 </div>
 
 <h3>
@@ -1952,9 +1376,7 @@ A clean digital home for creators and professionals.
 </section>
 
 
-<!-- =====================================================
-     PROCESS
-===================================================== -->
+<!-- PROCESS -->
 
 <section id="process">
 
@@ -1966,13 +1388,12 @@ A clean digital home for creators and professionals.
 03 — PROCESS
 </div>
 
-
 <h2 class="title">
 
 Simple process.<br>
 
 <span class="gradient">
-Big results.
+Big results. 💥
 </span>
 
 </h2>
@@ -1985,12 +1406,10 @@ Big results.
 
 <div class="process-card glass">
 
-<span>
-01
-</span>
+<span>01</span>
 
 <h3>
-Tell Us
+💬 Tell Us
 </h3>
 
 <p>
@@ -2002,12 +1421,10 @@ Tell us about your business and what you want.
 
 <div class="process-card glass">
 
-<span>
-02
-</span>
+<span>02</span>
 
 <h3>
-Plan
+🧠 Plan
 </h3>
 
 <p>
@@ -2019,12 +1436,10 @@ We plan the structure, design and experience.
 
 <div class="process-card glass">
 
-<span>
-03
-</span>
+<span>03</span>
 
 <h3>
-Build
+🛠️ Build
 </h3>
 
 <p>
@@ -2036,12 +1451,10 @@ Your website is designed and developed.
 
 <div class="process-card glass">
 
-<span>
-04
-</span>
+<span>04</span>
 
 <h3>
-Launch
+🚀 Launch
 </h3>
 
 <p>
@@ -2058,9 +1471,7 @@ Your website goes live and is ready to share.
 </section>
 
 
-<!-- =====================================================
-     WHY NYXEBITE
-===================================================== -->
+<!-- WHY NYXEBITE -->
 
 <section>
 
@@ -2075,17 +1486,15 @@ Your website goes live and is ready to share.
 04 — WHY NYXEBITE
 </div>
 
-
 <h2 class="title">
 
 Not just a<br>
 
 <span class="gradient">
-website.
+website. 💎
 </span>
 
 </h2>
-
 
 <p class="muted" style="margin-top:25px;">
 
@@ -2103,7 +1512,7 @@ We focus on making that first impression count.
 <div class="why-item glass">
 
 <h3>
-✦ Premium Visuals
+💎 Premium Visuals
 </h3>
 
 <p>
@@ -2116,7 +1525,7 @@ Modern layouts with strong visual identity.
 <div class="why-item glass">
 
 <h3>
-✦ Mobile Ready
+📱 Mobile Ready
 </h3>
 
 <p>
@@ -2129,7 +1538,7 @@ Designed to look great on every screen.
 <div class="why-item glass">
 
 <h3>
-✦ Your Vision
+🎯 Your Vision
 </h3>
 
 <p>
@@ -2142,7 +1551,7 @@ Every project is shaped around your requirements.
 <div class="why-item glass">
 
 <h3>
-✦ Built to Grow
+📈 Built to Grow
 </h3>
 
 <p>
@@ -2161,9 +1570,7 @@ Start with a website and keep improving as you grow.
 </section>
 
 
-<!-- =====================================================
-     FOUNDER
-===================================================== -->
+<!-- FOUNDER -->
 
 <section id="founder">
 
@@ -2178,17 +1585,15 @@ Start with a website and keep improving as you grow.
 05 — THE FOUNDER
 </div>
 
-
 <h2 class="title">
 
 Meet the<br>
 
 <span class="gradient">
-Founder.
+Founder. 👑
 </span>
 
 </h2>
-
 
 <p class="muted" style="margin-top:25px;">
 
@@ -2203,21 +1608,17 @@ and modern presence on the web.
 
 <div class="founder-card glass">
 
-
 <div class="founder-avatar">
 SS
 </div>
-
 
 <div class="founder-role">
 FOUNDER & CREATIVE LEAD
 </div>
 
-
 <h3 class="founder-name">
 Shresth Singh
 </h3>
-
 
 <p>
 
@@ -2226,7 +1627,6 @@ modern, creative and memorable digital
 experiences.
 
 </p>
-
 
 </div>
 
@@ -2237,9 +1637,7 @@ experiences.
 </section>
 
 
-<!-- =====================================================
-     CTA
-===================================================== -->
+<!-- CTA -->
 
 <section>
 
@@ -2250,30 +1648,25 @@ experiences.
 <div class="cta-content">
 
 <div class="label">
-READY?
+🔥 READY?
 </div>
-
 
 <h2>
 
 Let's build<br>
 
 <span class="gradient">
-something epic.
+something epic. 🚀
 </span>
 
 </h2>
-
 
 <p>
 Have an idea? Let's turn it into a digital experience.
 </p>
 
-
 <a href="#contact" class="btn primary">
-
-Start Your Project →
-
+🚀 Start Your Project →
 </a>
 
 </div>
@@ -2285,9 +1678,7 @@ Start Your Project →
 </section>
 
 
-<!-- =====================================================
-     CONTACT
-===================================================== -->
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -2302,17 +1693,15 @@ Start Your Project →
 06 — CONTACT
 </div>
 
-
 <h2 class="title">
 
 Your idea.<br>
 
 <span class="gradient">
-Our build.
+Our build. 💻
 </span>
 
 </h2>
-
 
 <p class="muted" style="margin-top:25px;max-width:500px;">
 
@@ -2330,7 +1719,7 @@ your website project.
 <div class="contact-item">
 
 <small>
-EMAIL
+📧 EMAIL
 </small>
 
 <strong>
@@ -2343,7 +1732,7 @@ singhshresth128@gmail.com
 <div class="contact-item">
 
 <small>
-WHATSAPP
+💬 WHATSAPP
 </small>
 
 <strong>
@@ -2355,16 +1744,13 @@ WHATSAPP
 
 <div class="contact-buttons">
 
-
 <a
 href="https://wa.me/918189027132"
 target="_blank"
 rel="noopener noreferrer"
 class="btn primary"
 >
-
-WhatsApp Us →
-
+💬 WhatsApp Us →
 </a>
 
 
@@ -2372,11 +1758,8 @@ WhatsApp Us →
 href="mailto:singhshresth128@gmail.com"
 class="btn secondary"
 >
-
-Email Us
-
+📧 Email Us
 </a>
-
 
 </div>
 
@@ -2389,9 +1772,7 @@ Email Us
 </section>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -2404,7 +1785,7 @@ Email Us
 </div>
 
 <div>
-FOUNDED BY SHRESTH SINGH
+🚀 FOUNDED BY SHRESTH SINGH
 </div>
 
 </div>
@@ -2423,52 +1804,36 @@ rel="noopener noreferrer"
 class="whatsapp"
 aria-label="Chat on WhatsApp"
 >
-✆
+💬
 </a>
 
 
 <script>
 
-/* =====================================================
-   SCROLL REVEAL
-===================================================== */
+/* SCROLL REVEAL */
 
 const reveals =
 document.querySelectorAll(".reveal");
 
 const observer =
 new IntersectionObserver(
-
 (entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("active");
-
-}
-
-});
-
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("active");
+        }
+    });
 },
-
 {
-threshold:.12
-}
-
-);
+    threshold:.12
+});
 
 reveals.forEach(el=>{
-
-observer.observe(el);
-
+    observer.observe(el);
 });
 
 
-/* =====================================================
-   GLASS CARD TILT
-===================================================== */
+/* CARD TILT */
 
 const cards =
 document.querySelectorAll(
@@ -2477,139 +1842,113 @@ document.querySelectorAll(
 
 cards.forEach(card=>{
 
-card.addEventListener(
-"mousemove",
-(e)=>{
+    card.addEventListener("mousemove",(e)=>{
 
-if(window.innerWidth < 800)
-return;
+        if(window.innerWidth < 800) return;
 
-const rect =
-card.getBoundingClientRect();
+        const rect =
+        card.getBoundingClientRect();
 
-const x =
-e.clientX - rect.left;
+        const x =
+        e.clientX - rect.left;
 
-const y =
-e.clientY - rect.top;
+        const y =
+        e.clientY - rect.top;
 
-const rotateY =
-(x / rect.width - .5) * 5;
+        const rotateY =
+        (x / rect.width - .5) * 5;
 
-const rotateX =
-(y / rect.height - .5) * -5;
+        const rotateX =
+        (y / rect.height - .5) * -5;
 
-card.style.transform =
-`
-perspective(900px)
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)
-translateY(-8px)
-`;
+        card.style.transform =
+        `
+        perspective(900px)
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+        translateY(-8px)
+        `;
 
-});
+    });
 
-
-card.addEventListener(
-"mouseleave",
-()=>{
-
-card.style.transform="";
-
-});
+    card.addEventListener("mouseleave",()=>{
+        card.style.transform="";
+    });
 
 });
 
 
-/* =====================================================
-   PORTFOLIO TILT
-===================================================== */
+/* PROJECT TILT */
 
 const projects =
 document.querySelectorAll(".project");
 
 projects.forEach(project=>{
 
-project.addEventListener(
-"mousemove",
-(e)=>{
+    project.addEventListener("mousemove",(e)=>{
 
-if(window.innerWidth < 800)
-return;
+        if(window.innerWidth < 800) return;
 
-const rect =
-project.getBoundingClientRect();
+        const rect =
+        project.getBoundingClientRect();
 
-const x =
-e.clientX - rect.left;
+        const x =
+        e.clientX - rect.left;
 
-const y =
-e.clientY - rect.top;
+        const y =
+        e.clientY - rect.top;
 
-const rotateY =
-(x / rect.width - .5) * 4;
+        const rotateY =
+        (x / rect.width - .5) * 4;
 
-const rotateX =
-(y / rect.height - .5) * -4;
+        const rotateX =
+        (y / rect.height - .5) * -4;
 
-project.style.transform =
-`
-perspective(1000px)
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)
-translateY(-8px)
-`;
+        project.style.transform =
+        `
+        perspective(1000px)
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+        translateY(-8px)
+        `;
 
-});
+    });
 
-
-project.addEventListener(
-"mouseleave",
-()=>{
-
-project.style.transform="";
-
-});
+    project.addEventListener("mouseleave",()=>{
+        project.style.transform="";
+    });
 
 });
 
 
-/* =====================================================
-   HERO GLASS ITEMS
-===================================================== */
+/* HERO PANEL */
 
 const panelItems =
 document.querySelectorAll(".panel-item");
 
 panelItems.forEach(item=>{
 
-item.addEventListener(
-"mouseenter",
-()=>{
+    item.addEventListener("mouseenter",()=>{
 
-panelItems.forEach(other=>{
-other.style.opacity=".45";
-});
+        panelItems.forEach(other=>{
+            other.style.opacity=".45";
+        });
 
-item.style.opacity="1";
+        item.style.opacity="1";
 
-});
+    });
 
+    item.addEventListener("mouseleave",()=>{
 
-item.addEventListener(
-"mouseleave",
-()=>{
+        panelItems.forEach(other=>{
+            other.style.opacity="1";
+        });
 
-panelItems.forEach(other=>{
-other.style.opacity="1";
-});
-
-});
+    });
 
 });
 
 </script>
-
 
 </body>
 </html>
