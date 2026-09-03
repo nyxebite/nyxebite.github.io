@@ -8,7 +8,7 @@
 
 <title>NyxeBite — We Build Digital Experiences</title>
 
-<meta name="description" content="NyxeBite builds modern, premium and futuristic websites for businesses, brands and creators.">
+<meta name="description" content="NyxeBite builds modern, premium and affordable websites starting from ₹500 for businesses, brands and creators.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,6 @@ a{
     color:inherit;
     text-decoration:none;
 }
-
 
 /* BACKGROUND */
 
@@ -91,7 +90,6 @@ body::after{
         "data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E"
     );
 }
-
 
 /* NAV */
 
@@ -158,7 +156,6 @@ nav{
     font-weight:800;
 }
 
-
 /* GENERAL */
 
 .container{
@@ -208,7 +205,6 @@ section{
     0%{background-position:0%}
     100%{background-position:250%}
 }
-
 
 /* GLASS */
 
@@ -266,7 +262,6 @@ section{
         transparent
     );
 }
-
 
 /* HERO */
 
@@ -375,12 +370,32 @@ section{
     transform:translateY(-5px);
 }
 
+/* PRICE HIGHLIGHT */
+
+.price-highlight{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:25px;
+    padding:12px 18px;
+    border-radius:14px;
+    border:1px solid rgba(167,124,255,.28);
+    background:rgba(167,124,255,.08);
+    color:#cbb8ff;
+    font-size:13px;
+    font-weight:700;
+}
+
+.price-highlight strong{
+    color:#fff;
+    font-size:18px;
+}
 
 /* HERO PANEL */
 
 .hero-panel{
     max-width:900px;
-    margin:75px auto 0;
+    margin:55px auto 0;
     min-height:150px;
     border-radius:28px;
     padding:25px;
@@ -410,7 +425,6 @@ section{
     border-color:rgba(167,124,255,.35);
     transform:translateY(-4px);
 }
-
 
 /* STATS */
 
@@ -444,14 +458,12 @@ section{
     letter-spacing:1px;
 }
 
-
 /* SECTION */
 
 .section-head{
     max-width:700px;
     margin-bottom:55px;
 }
-
 
 /* SERVICES */
 
@@ -506,9 +518,6 @@ section{
 
 .service:hover .service-icon{
     transform:scale(1.08) rotate(-3deg);
-    box-shadow:
-        0 0 30px rgba(155,108,255,.2),
-        inset 0 1px rgba(255,255,255,.25);
 }
 
 .service h3{
@@ -521,7 +530,6 @@ section{
     font-size:13px;
     line-height:1.7;
 }
-
 
 /* PORTFOLIO */
 
@@ -586,6 +594,77 @@ section{
     font-size:13px;
 }
 
+/* PRICING */
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.price-card{
+    padding:30px;
+    border-radius:24px;
+    transition:.4s;
+}
+
+.price-card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(155,108,255,.4);
+}
+
+.price-card.featured{
+    border-color:rgba(167,124,255,.45);
+    box-shadow:0 20px 70px rgba(76,29,149,.18);
+}
+
+.price-name{
+    color:#aaa;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.price{
+    font-size:40px;
+    font-weight:900;
+    margin:18px 0;
+    letter-spacing:-2px;
+}
+
+.price small{
+    color:#777782;
+    font-size:12px;
+    font-weight:500;
+}
+
+.price-card p{
+    color:#858590;
+    font-size:13px;
+    line-height:1.6;
+    min-height:62px;
+}
+
+.features{
+    list-style:none;
+    margin:22px 0;
+    display:grid;
+    gap:12px;
+}
+
+.features li{
+    color:#aaa;
+    font-size:12px;
+}
+
+.features li::first-letter{
+    color:#a678ff;
+}
+
+.price-btn{
+    width:100%;
+    justify-content:center;
+}
 
 /* PROCESS */
 
@@ -621,7 +700,6 @@ section{
     font-size:13px;
     line-height:1.7;
 }
-
 
 /* WHY */
 
@@ -662,7 +740,6 @@ section{
     line-height:1.6;
 }
 
-
 /* FOUNDER */
 
 .founder{
@@ -696,9 +773,6 @@ section{
         rgba(50,18,119,.65)
     );
     border:1px solid rgba(255,255,255,.15);
-    box-shadow:
-        0 0 40px rgba(155,108,255,.3),
-        inset 0 1px rgba(255,255,255,.3);
     margin-bottom:25px;
 }
 
@@ -719,7 +793,6 @@ section{
     font-size:14px;
     line-height:1.8;
 }
-
 
 /* CTA */
 
@@ -764,7 +837,6 @@ section{
     margin-bottom:30px;
 }
 
-
 /* CONTACT */
 
 .contact{
@@ -802,7 +874,6 @@ section{
     margin-top:30px;
 }
 
-
 /* WHATSAPP */
 
 .whatsapp{
@@ -835,7 +906,6 @@ section{
     border-color:rgba(167,124,255,.4);
 }
 
-
 /* FOOTER */
 
 footer{
@@ -849,7 +919,6 @@ footer{
     display:flex;
     justify-content:space-between;
 }
-
 
 /* REVEAL */
 
@@ -866,8 +935,15 @@ footer{
     transform:translateY(0);
 }
 
-
 /* MOBILE */
+
+@media(max-width:1000px){
+
+    .pricing{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
 
 @media(max-width:850px){
 
@@ -893,7 +969,7 @@ footer{
     }
 
     .hero-panel{
-        margin-top:55px;
+        margin-top:45px;
         padding:18px;
     }
 
@@ -924,8 +1000,20 @@ footer{
     .stat:last-child{
         border-bottom:0;
     }
+
 }
 
+@media(max-width:600px){
+
+    .pricing{
+        grid-template-columns:1fr;
+    }
+
+    .price-card{
+        padding:28px;
+    }
+
+}
 
 @media(max-width:500px){
 
@@ -979,17 +1067,16 @@ footer{
         right:16px;
         bottom:16px;
     }
+
 }
 
 </style>
 </head>
 
-
 <body>
 
 <div class="grid-bg"></div>
 <div class="noise"></div>
-
 
 <!-- NAVBAR -->
 
@@ -1007,6 +1094,8 @@ Nyxe<span>Bite</span>
 
 <a href="#work">Work</a>
 
+<a href="#pricing">Pricing</a>
+
 <a href="#process">Process</a>
 
 <a href="#founder">Founder</a>
@@ -1020,7 +1109,6 @@ Nyxe<span>Bite</span>
 </div>
 
 </nav>
-
 
 <!-- HERO -->
 
@@ -1038,7 +1126,6 @@ Nyxe<span>Bite</span>
 
 </div>
 
-
 <h1>
 
 We Build
@@ -1051,15 +1138,13 @@ Digital Experiences. ✨
 
 </h1>
 
-
 <p>
 
-NyxeBite creates premium, modern and high-performance
-websites for businesses, brands and people who want to
-stand out online.
+NyxeBite creates modern, premium and affordable
+websites for businesses, brands and people who want
+to stand out online.
 
 </p>
-
 
 <div class="hero-buttons">
 
@@ -1073,6 +1158,9 @@ stand out online.
 
 </div>
 
+<div class="price-highlight">
+💰 Websites Starting at <strong>₹500</strong>
+</div>
 
 <div class="hero-panel glass">
 
@@ -1100,7 +1188,6 @@ stand out online.
 
 </section>
 
-
 <!-- STATS -->
 
 <section style="padding-top:20px;">
@@ -1110,27 +1197,18 @@ stand out online.
 <div class="stats">
 
 <div class="stat">
-
 <strong>01</strong>
-
 <span>💡 VISION</span>
-
 </div>
 
 <div class="stat">
-
 <strong>∞</strong>
-
 <span>✨ CREATIVITY</span>
-
 </div>
 
 <div class="stat">
-
 <strong>24/7</strong>
-
 <span>🌐 DIGITAL PRESENCE</span>
-
 </div>
 
 </div>
@@ -1138,7 +1216,6 @@ stand out online.
 </div>
 
 </section>
-
 
 <!-- SERVICES -->
 
@@ -1171,9 +1248,7 @@ digital experiences designed around your goals.
 
 </div>
 
-
 <div class="services">
-
 
 <div class="service glass">
 
@@ -1192,7 +1267,6 @@ build trust and reach more customers online.
 
 </div>
 
-
 <div class="service glass">
 
 <div class="service-number">02</div>
@@ -1209,7 +1283,6 @@ your brand look memorable and premium.
 </p>
 
 </div>
-
 
 <div class="service glass">
 
@@ -1228,7 +1301,6 @@ product, service or idea.
 
 </div>
 
-
 <div class="service glass">
 
 <div class="service-number">04</div>
@@ -1245,7 +1317,6 @@ portfolio or creator website.
 </p>
 
 </div>
-
 
 <div class="service glass">
 
@@ -1264,7 +1335,6 @@ across phones, tablets and computers.
 
 </div>
 
-
 <div class="service glass">
 
 <div class="service-number">06</div>
@@ -1282,13 +1352,11 @@ details that give your website a premium feel.
 
 </div>
 
-
 </div>
 
 </div>
 
 </section>
-
 
 <!-- PORTFOLIO -->
 
@@ -1314,9 +1382,7 @@ into reality. 🔥
 
 </div>
 
-
 <div class="portfolio">
-
 
 <div class="project one glass">
 
@@ -1334,7 +1400,6 @@ Futuristic digital creative studio experience.
 
 </div>
 
-
 <div class="project two glass">
 
 <div class="project-tag">
@@ -1350,7 +1415,6 @@ Modern website concept for a beauty business.
 </p>
 
 </div>
-
 
 <div class="project three glass">
 
@@ -1368,13 +1432,194 @@ A clean digital home for creators and professionals.
 
 </div>
 
-
 </div>
 
 </div>
 
 </section>
 
+<!-- PRICING -->
+
+<section id="pricing">
+
+<div class="container reveal">
+
+<div class="section-head">
+
+<div class="label">
+03 — PRICING
+</div>
+
+<h2 class="title">
+
+Simple pricing.<br>
+
+<span class="gradient">
+No confusion. 💰
+</span>
+
+</h2>
+
+<p class="muted" style="margin-top:22px;">
+
+Choose a package that fits your needs.
+Websites start from just ₹500.
+
+</p>
+
+</div>
+
+<div class="pricing">
+
+<!-- STARTER -->
+
+<div class="price-card glass">
+
+<div class="price-name">
+STARTER
+</div>
+
+<div class="price">
+₹500 <small>/ website</small>
+</div>
+
+<p>
+Perfect for a simple online presence.
+</p>
+
+<ul class="features">
+
+<li>✅ 1-page website</li>
+<li>✅ Modern design</li>
+<li>✅ Mobile responsive</li>
+<li>✅ Basic sections</li>
+
+</ul>
+
+<a
+href="https://wa.me/918189027132?text=Hi%20NyxeBite%2C%20I%20want%20the%20Starter%20website%20package."
+target="_blank"
+rel="noopener noreferrer"
+class="btn secondary price-btn"
+>
+🚀 Get Started
+</a>
+
+</div>
+
+<!-- BUSINESS -->
+
+<div class="price-card glass featured">
+
+<div class="price-name">
+BUSINESS
+</div>
+
+<div class="price">
+₹999 <small>/ website</small>
+</div>
+
+<p>
+For small businesses and local brands.
+</p>
+
+<ul class="features">
+
+<li>✅ Multi-section website</li>
+<li>✅ Modern UI</li>
+<li>✅ Mobile responsive</li>
+<li>✅ WhatsApp CTA</li>
+
+</ul>
+
+<a
+href="https://wa.me/918189027132?text=Hi%20NyxeBite%2C%20I%20want%20the%20Business%20website%20package."
+target="_blank"
+rel="noopener noreferrer"
+class="btn primary price-btn"
+>
+🚀 Choose Business
+</a>
+
+</div>
+
+<!-- PREMIUM -->
+
+<div class="price-card glass">
+
+<div class="price-name">
+PREMIUM
+</div>
+
+<div class="price">
+₹1,499 <small>/ website</small>
+</div>
+
+<p>
+For brands that want a stronger online presence.
+</p>
+
+<ul class="features">
+
+<li>✅ Premium design</li>
+<li>✅ More sections</li>
+<li>✅ Animations</li>
+<li>✅ Contact features</li>
+
+</ul>
+
+<a
+href="https://wa.me/918189027132?text=Hi%20NyxeBite%2C%20I%20want%20the%20Premium%20website%20package."
+target="_blank"
+rel="noopener noreferrer"
+class="btn secondary price-btn"
+>
+🚀 Get Started
+</a>
+
+</div>
+
+<!-- CUSTOM -->
+
+<div class="price-card glass">
+
+<div class="price-name">
+CUSTOM
+</div>
+
+<div class="price">
+₹2,499+ <small>/ project</small>
+</div>
+
+<p>
+For unique requirements and custom projects.
+</p>
+
+<ul class="features">
+
+<li>✅ Custom design</li>
+<li>✅ Custom sections</li>
+<li>✅ Advanced features</li>
+<li>✅ Tailored experience</li>
+
+</ul>
+
+<a
+href="https://wa.me/918189027132?text=Hi%20NyxeBite%2C%20I%20want%20to%20discuss%20a%20Custom%20website%20project."
+target="_blank"
+rel="noopener noreferrer"
+class="btn secondary price-btn"
+>
+💬 Discuss Project
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 <!-- PROCESS -->
 
@@ -1385,7 +1630,7 @@ A clean digital home for creators and professionals.
 <div class="section-head">
 
 <div class="label">
-03 — PROCESS
+04 — PROCESS
 </div>
 
 <h2 class="title">
@@ -1400,9 +1645,7 @@ Big results. 💥
 
 </div>
 
-
 <div class="process">
-
 
 <div class="process-card glass">
 
@@ -1418,7 +1661,6 @@ Tell us about your business and what you want.
 
 </div>
 
-
 <div class="process-card glass">
 
 <span>02</span>
@@ -1432,7 +1674,6 @@ We plan the structure, design and experience.
 </p>
 
 </div>
-
 
 <div class="process-card glass">
 
@@ -1448,7 +1689,6 @@ Your website is designed and developed.
 
 </div>
 
-
 <div class="process-card glass">
 
 <span>04</span>
@@ -1463,13 +1703,11 @@ Your website goes live and is ready to share.
 
 </div>
 
-
 </div>
 
 </div>
 
 </section>
-
 
 <!-- WHY NYXEBITE -->
 
@@ -1479,11 +1717,10 @@ Your website goes live and is ready to share.
 
 <div class="why">
 
-
 <div class="why-box glass">
 
 <div class="label">
-04 — WHY NYXEBITE
+05 — WHY NYXEBITE
 </div>
 
 <h2 class="title">
@@ -1505,9 +1742,7 @@ We focus on making that first impression count.
 
 </div>
 
-
 <div class="why-list">
-
 
 <div class="why-item glass">
 
@@ -1521,7 +1756,6 @@ Modern layouts with strong visual identity.
 
 </div>
 
-
 <div class="why-item glass">
 
 <h3>
@@ -1533,7 +1767,6 @@ Designed to look great on every screen.
 </p>
 
 </div>
-
 
 <div class="why-item glass">
 
@@ -1547,7 +1780,6 @@ Every project is shaped around your requirements.
 
 </div>
 
-
 <div class="why-item glass">
 
 <h3>
@@ -1560,7 +1792,6 @@ Start with a website and keep improving as you grow.
 
 </div>
 
-
 </div>
 
 </div>
@@ -1568,7 +1799,6 @@ Start with a website and keep improving as you grow.
 </div>
 
 </section>
-
 
 <!-- FOUNDER -->
 
@@ -1578,11 +1808,10 @@ Start with a website and keep improving as you grow.
 
 <div class="founder">
 
-
 <div class="founder-intro glass">
 
 <div class="label">
-05 — THE FOUNDER
+06 — THE FOUNDER
 </div>
 
 <h2 class="title">
@@ -1604,7 +1833,6 @@ and modern presence on the web.
 </p>
 
 </div>
-
 
 <div class="founder-card glass">
 
@@ -1636,7 +1864,6 @@ experiences.
 
 </section>
 
-
 <!-- CTA -->
 
 <section>
@@ -1662,7 +1889,7 @@ something epic. 🚀
 </h2>
 
 <p>
-Have an idea? Let's turn it into a digital experience.
+Have an idea? Websites starting from ₹500.
 </p>
 
 <a href="#contact" class="btn primary">
@@ -1677,7 +1904,6 @@ Have an idea? Let's turn it into a digital experience.
 
 </section>
 
-
 <!-- CONTACT -->
 
 <section id="contact">
@@ -1686,11 +1912,10 @@ Have an idea? Let's turn it into a digital experience.
 
 <div class="contact">
 
-
 <div>
 
 <div class="label">
-06 — CONTACT
+07 — CONTACT
 </div>
 
 <h2 class="title">
@@ -1712,9 +1937,7 @@ your website project.
 
 </div>
 
-
 <div class="contact-card glass">
-
 
 <div class="contact-item">
 
@@ -1728,7 +1951,6 @@ singhshresth128@gmail.com
 
 </div>
 
-
 <div class="contact-item">
 
 <small>
@@ -1741,7 +1963,6 @@ singhshresth128@gmail.com
 
 </div>
 
-
 <div class="contact-buttons">
 
 <a
@@ -1752,7 +1973,6 @@ class="btn primary"
 >
 💬 WhatsApp Us →
 </a>
-
 
 <a
 href="mailto:singhshresth128@gmail.com"
@@ -1770,7 +1990,6 @@ class="btn secondary"
 </div>
 
 </section>
-
 
 <!-- FOOTER -->
 
@@ -1794,7 +2013,6 @@ class="btn secondary"
 
 </footer>
 
-
 <!-- FLOATING WHATSAPP -->
 
 <a
@@ -1806,7 +2024,6 @@ aria-label="Chat on WhatsApp"
 >
 💬
 </a>
-
 
 <script>
 
@@ -1832,12 +2049,11 @@ reveals.forEach(el=>{
     observer.observe(el);
 });
 
-
 /* CARD TILT */
 
 const cards =
 document.querySelectorAll(
-".service, .process-card, .why-item"
+".service, .process-card, .why-item, .price-card"
 );
 
 cards.forEach(card=>{
@@ -1876,7 +2092,6 @@ cards.forEach(card=>{
     });
 
 });
-
 
 /* PROJECT TILT */
 
@@ -1919,7 +2134,6 @@ projects.forEach(project=>{
     });
 
 });
-
 
 /* HERO PANEL */
 
