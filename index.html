@@ -794,6 +794,178 @@ section{
     line-height:1.8;
 }
 
+
+/* CLIENT × EDITOR HUB */
+
+.marketplace-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.market-card{
+    padding:40px;
+    border-radius:28px;
+    transition:.45s;
+}
+
+.market-card:hover{
+    transform:translateY(-10px);
+    border-color:rgba(155,108,255,.4);
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.18),
+        0 30px 90px rgba(76,29,149,.22);
+}
+
+.market-icon{
+    width:65px;
+    height:65px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:20px;
+    font-size:30px;
+    margin-bottom:25px;
+    background:linear-gradient(
+        135deg,
+        rgba(167,124,255,.2),
+        rgba(255,255,255,.04)
+    );
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.market-tag{
+    color:#9b6cff;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.market-card h3{
+    font-size:32px;
+    margin-bottom:13px;
+}
+
+.market-card > p{
+    color:#858590;
+    font-size:14px;
+    line-height:1.75;
+    margin-bottom:25px;
+}
+
+.market-points{
+    display:grid;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.market-points div{
+    color:#aaa;
+    font-size:13px;
+}
+
+.fee-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 18px;
+    margin-bottom:22px;
+    border-radius:16px;
+    border:1px solid rgba(167,124,255,.25);
+    background:rgba(167,124,255,.07);
+}
+
+.fee-box strong{
+    color:#fff;
+    font-size:20px;
+}
+
+.fee-box span{
+    color:#858590;
+    font-size:11px;
+}
+
+.editor-fee strong{
+    color:#cbb8ff;
+    font-size:15px;
+    letter-spacing:1px;
+}
+
+.market-btn{
+    width:100%;
+    justify-content:center;
+}
+
+.market-process{
+    margin-top:22px;
+    padding:32px;
+    border-radius:25px;
+}
+
+.market-process-title{
+    color:#cbb8ff;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:28px;
+}
+
+.market-steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.market-step{
+    display:flex;
+    gap:15px;
+    padding:20px;
+    border-radius:18px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+    transition:.35s;
+}
+
+.market-step:hover{
+    transform:translateY(-5px);
+    border-color:rgba(155,108,255,.3);
+    background:rgba(167,124,255,.07);
+}
+
+.market-step > span{
+    font-size:22px;
+    font-weight:900;
+    color:#9b6cff;
+}
+
+.market-step h4{
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+.market-step p{
+    color:#777783;
+    font-size:11px;
+    line-height:1.6;
+}
+
+.market-note{
+    margin-top:18px;
+    padding:18px 22px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.025);
+    color:#777783;
+    font-size:11px;
+    line-height:1.7;
+}
+
+.market-note strong{
+    color:#aaa;
+}
+
+
 /* CTA */
 
 .cta{
@@ -976,7 +1148,8 @@ footer{
     .services,
     .portfolio,
     .why,
-    .founder{
+    .founder,
+    .marketplace-grid{
         grid-template-columns:1fr;
     }
 
@@ -999,6 +1172,10 @@ footer{
 
     .stat:last-child{
         border-bottom:0;
+    }
+
+    .market-steps{
+        grid-template-columns:1fr 1fr;
     }
 
 }
@@ -1068,6 +1245,22 @@ footer{
         bottom:16px;
     }
 
+    .market-card{
+        padding:28px;
+    }
+
+    .market-card h3{
+        font-size:28px;
+    }
+
+    .market-process{
+        padding:22px;
+    }
+
+    .market-steps{
+        grid-template-columns:1fr;
+    }
+
 }
 
 </style>
@@ -1099,6 +1292,8 @@ Nyxe<span>Bite</span>
 <a href="#process">Process</a>
 
 <a href="#founder">Founder</a>
+
+<a href="#marketplace">Client × Editor</a>
 
 <a href="#contact" class="navbutton">
 🚀 Start Project →
@@ -1864,6 +2059,219 @@ experiences.
 
 </section>
 
+
+<!-- CLIENT × EDITOR HUB -->
+
+<section id="marketplace">
+
+<div class="container reveal">
+
+<div class="section-head">
+
+<div class="label">
+07 — CLIENT × EDITOR HUB
+</div>
+
+<h2 class="title">
+
+Where Ideas<br>
+
+<span class="gradient">
+Meet Creators. ⚡
+</span>
+
+</h2>
+
+<p class="muted" style="margin-top:22px;">
+
+Clients bring the idea. Editors bring the skills.
+NyxeBite brings them together to turn projects into
+real digital experiences.
+
+</p>
+
+</div>
+
+<div class="marketplace-grid">
+
+<!-- CLIENT -->
+
+<div class="market-card glass">
+
+<div class="market-icon">
+👤
+</div>
+
+<div class="market-tag">
+FOR CLIENTS
+</div>
+
+<h3>
+Need a Website?
+</h3>
+
+<p>
+Have a website idea but don't want to build it
+yourself? Tell us what you need and we'll connect
+you with an editor who can work on your project.
+</p>
+
+<div class="market-points">
+
+<div>✅ Share your project idea</div>
+<div>✅ Get connected with an editor</div>
+<div>✅ Discuss your requirements</div>
+<div>✅ Get your website built</div>
+
+</div>
+
+<div class="fee-box">
+💰 <strong>₹50</strong>
+<span>NyxeBite platform fee</span>
+</div>
+
+<a
+href="https://wa.me/918189027132?text=Hi%20NyxeBite%2C%20I%20am%20a%20Client%20and%20I%20want%20to%20post%20a%20website%20project."
+target="_blank"
+rel="noopener noreferrer"
+class="btn primary market-btn"
+>
+🚀 Post a Project →
+</a>
+
+</div>
+
+
+<!-- EDITOR -->
+
+<div class="market-card glass">
+
+<div class="market-icon">
+💻
+</div>
+
+<div class="market-tag">
+FOR EDITORS
+</div>
+
+<h3>
+Ready to Build?
+</h3>
+
+<p>
+Are you a website designer or editor? Join the
+NyxeBite network and get opportunities to work
+on website projects from clients.
+</p>
+
+<div class="market-points">
+
+<div>✅ Discover website projects</div>
+<div>✅ Work with clients</div>
+<div>✅ Build your portfolio</div>
+<div>✅ Get paid for your skills</div>
+
+</div>
+
+<div class="fee-box editor-fee">
+✨ <strong>EDITOR</strong>
+<span>Build • Create • Grow</span>
+</div>
+
+<a
+href="https://wa.me/918189027132?text=Hi%20NyxeBite%2C%20I%20want%20to%20join%20as%20an%20Editor."
+target="_blank"
+rel="noopener noreferrer"
+class="btn secondary market-btn"
+>
+✨ Join as Editor →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- HOW IT WORKS -->
+
+<div class="market-process glass">
+
+<div class="market-process-title">
+⚡ HOW NYXEBITE CONNECTS CLIENTS & EDITORS
+</div>
+
+<div class="market-steps">
+
+<div class="market-step">
+
+<span>01</span>
+
+<div>
+<h4>👤 Client Posts</h4>
+<p>
+Client shares the website requirements.
+</p>
+</div>
+
+</div>
+
+<div class="market-step">
+
+<span>02</span>
+
+<div>
+<h4>🔎 Editor Matches</h4>
+<p>
+A suitable editor can take the project.
+</p>
+</div>
+
+</div>
+
+<div class="market-step">
+
+<span>03</span>
+
+<div>
+<h4>🤝 Project Starts</h4>
+<p>
+Client and editor discuss the project.
+</p>
+</div>
+
+</div>
+
+<div class="market-step">
+
+<span>04</span>
+
+<div>
+<h4>🚀 Website Delivered</h4>
+<p>
+The editor builds and delivers the website.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="market-note">
+
+🔐 <strong>NyxeBite Platform</strong> — Clients and editors
+connect through NyxeBite. A ₹50 platform fee is charged
+to the client for starting a project through the platform.
+
+</div>
+
+</div>
+
+</section>
+
+
 <!-- CTA -->
 
 <section>
@@ -1915,7 +2323,7 @@ Have an idea? Websites starting from ₹500.
 <div>
 
 <div class="label">
-07 — CONTACT
+08 — CONTACT
 </div>
 
 <h2 class="title">
@@ -2049,11 +2457,12 @@ reveals.forEach(el=>{
     observer.observe(el);
 });
 
+
 /* CARD TILT */
 
 const cards =
 document.querySelectorAll(
-".service, .process-card, .why-item, .price-card"
+".service, .process-card, .why-item, .price-card, .market-card"
 );
 
 cards.forEach(card=>{
@@ -2092,6 +2501,7 @@ cards.forEach(card=>{
     });
 
 });
+
 
 /* PROJECT TILT */
 
@@ -2134,6 +2544,7 @@ projects.forEach(project=>{
     });
 
 });
+
 
 /* HERO PANEL */
 
